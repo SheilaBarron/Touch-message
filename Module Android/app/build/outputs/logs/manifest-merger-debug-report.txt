@@ -1,0 +1,226 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+MERGED from [com.github.nisrulz:screenshott:2.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/13589b519245a2f072968b2d807d5b5b/AndroidManifest.xml:17:1-30:12
+MERGED from [org.joml:joml-android:1.9.3-SNAPSHOT] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/a34b8bb6477161ed9b2421b7631b6be2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:design:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/constraint-layout-2.0.0-beta6.aar/2c7e15e900999ffe6a5cd210f827a74a/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/197988e7f3db1293c1e8e7a48ca3ed89/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/530ba51c86421de7636f30ace369d4b1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/034d66d1b5fd385eee739a8684bd7541/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2a5731889f39fddee092fd7badf41a31/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/a00493072fc99a45b8a42959b155d48a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/8bc0915ca5612d1256fbd5badeb1d97b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/1c9075c5d2b9d4a16a0454281864cc05/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/a5a150608dd120298387ed3c3409ab47/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/bb75cc77c153f0c75755667c91e6c133/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c8ac18ad1c28ba3eb17b7fda63ad1d19/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0f1ae008a4a0f56dc3b2dff62551bccb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/bc750bb86143719e288c68b5ebe7b6f1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/e662c534ff971f4f4e36881387089692/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/72ccdcfa7c6aa85df88e80dce4b27690/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d86b2319f4b621a45b84bb5b897d9fe6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/9b82c7f828b6796f10023c49955775a2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/aaec168f8250c52e8aedff6730c95ae9/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fb53817a1f1e37a93af96fc360281338/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/bb6e18f80cfc14b9b97efbb20fcea3da/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/50d3292969080b0ce0afb087e66f524f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/d1c153f84b24beec81389e2f9b168f64/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/3732c18f21b1033e23ee7ad82fdb97da/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/35dee9d452da964fe59575ae5d9268e0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/6b5271fad9c44265d5479c6523772808/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/aaba1fb27c8ad198a4f2fae5e0ca700b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/fc9e4eb860165b0243169315639b7c16/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/2116dd2d298d29c2bc8ff49294ace036/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/2b11598291c660ad4d76f14a65fbf16a/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+	package
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:3:5-41
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:1-41:12
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:6:5-74
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:6:22-71
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:7:5-68
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:7:22-65
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:12:22-77
+uses-feature#android.hardware.sensor.accelerometer
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:14:5-16:35
+	android:required
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:16:9-32
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:15:9-61
+uses-feature#android.hardware.sensor.magnetic
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:17:5-19:35
+	android:required
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:19:9-32
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:18:9-56
+uses-feature#0x00020000
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:21:5-78
+	android:glEsVersion
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:21:52-75
+application
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:24:5-39:19
+MERGED from [com.github.nisrulz:screenshott:2.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/13589b519245a2f072968b2d807d5b5b/AndroidManifest.xml:27:5-28:19
+MERGED from [com.github.nisrulz:screenshott:2.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/13589b519245a2f072968b2d807d5b5b/AndroidManifest.xml:27:5-28:19
+MERGED from [com.android.support:design:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/constraint-layout-2.0.0-beta6.aar/2c7e15e900999ffe6a5cd210f827a74a/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/constraint-layout-2.0.0-beta6.aar/2c7e15e900999ffe6a5cd210f827a74a/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/9b82c7f828b6796f10023c49955775a2/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/9b82c7f828b6796f10023c49955775a2/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/aaec168f8250c52e8aedff6730c95ae9/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/aaec168f8250c52e8aedff6730c95ae9/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/9b82c7f828b6796f10023c49955775a2/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:29:9-35
+	android:label
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:27:9-41
+	android:roundIcon
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:28:9-51
+	android:icon
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:26:9-46
+	android:allowBackup
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:25:9-35
+	android:theme
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:30:9-40
+activity#com.example.a92gde.chatapp.ConnexionActivity
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:31:9-37:20
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:31:19-78
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:32:13-36:29
+action#android.intent.action.MAIN
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:33:17-69
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:33:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:35:27-74
+activity#com.example.a92gde.chatapp.DataExchangingActivity
+ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:38:9-86
+	android:name
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml:38:19-83
+uses-sdk
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+MERGED from [com.github.nisrulz:screenshott:2.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/13589b519245a2f072968b2d807d5b5b/AndroidManifest.xml:23:5-25:41
+MERGED from [com.github.nisrulz:screenshott:2.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/13589b519245a2f072968b2d807d5b5b/AndroidManifest.xml:23:5-25:41
+MERGED from [org.joml:joml-android:1.9.3-SNAPSHOT] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/a34b8bb6477161ed9b2421b7631b6be2/AndroidManifest.xml:7:5-9:41
+MERGED from [org.joml:joml-android:1.9.3-SNAPSHOT] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/a34b8bb6477161ed9b2421b7631b6be2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/constraint-layout-2.0.0-beta6.aar/2c7e15e900999ffe6a5cd210f827a74a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:2.0.0-beta6] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/constraint-layout-2.0.0-beta6.aar/2c7e15e900999ffe6a5cd210f827a74a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/197988e7f3db1293c1e8e7a48ca3ed89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/197988e7f3db1293c1e8e7a48ca3ed89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/530ba51c86421de7636f30ace369d4b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/530ba51c86421de7636f30ace369d4b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/034d66d1b5fd385eee739a8684bd7541/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/034d66d1b5fd385eee739a8684bd7541/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2a5731889f39fddee092fd7badf41a31/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2a5731889f39fddee092fd7badf41a31/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/a00493072fc99a45b8a42959b155d48a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/a00493072fc99a45b8a42959b155d48a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/8bc0915ca5612d1256fbd5badeb1d97b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/8bc0915ca5612d1256fbd5badeb1d97b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/1c9075c5d2b9d4a16a0454281864cc05/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/1c9075c5d2b9d4a16a0454281864cc05/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/a5a150608dd120298387ed3c3409ab47/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/a5a150608dd120298387ed3c3409ab47/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/bb75cc77c153f0c75755667c91e6c133/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/bb75cc77c153f0c75755667c91e6c133/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c8ac18ad1c28ba3eb17b7fda63ad1d19/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/c8ac18ad1c28ba3eb17b7fda63ad1d19/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0f1ae008a4a0f56dc3b2dff62551bccb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/0f1ae008a4a0f56dc3b2dff62551bccb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/bc750bb86143719e288c68b5ebe7b6f1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/bc750bb86143719e288c68b5ebe7b6f1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/e662c534ff971f4f4e36881387089692/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/e662c534ff971f4f4e36881387089692/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/72ccdcfa7c6aa85df88e80dce4b27690/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/72ccdcfa7c6aa85df88e80dce4b27690/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d86b2319f4b621a45b84bb5b897d9fe6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d86b2319f4b621a45b84bb5b897d9fe6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/9b82c7f828b6796f10023c49955775a2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/9b82c7f828b6796f10023c49955775a2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/aaec168f8250c52e8aedff6730c95ae9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/aaec168f8250c52e8aedff6730c95ae9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fb53817a1f1e37a93af96fc360281338/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/fb53817a1f1e37a93af96fc360281338/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/bb6e18f80cfc14b9b97efbb20fcea3da/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/bb6e18f80cfc14b9b97efbb20fcea3da/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/50d3292969080b0ce0afb087e66f524f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/50d3292969080b0ce0afb087e66f524f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/d1c153f84b24beec81389e2f9b168f64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/d1c153f84b24beec81389e2f9b168f64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/3732c18f21b1033e23ee7ad82fdb97da/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/3732c18f21b1033e23ee7ad82fdb97da/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/35dee9d452da964fe59575ae5d9268e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/35dee9d452da964fe59575ae5d9268e0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/6b5271fad9c44265d5479c6523772808/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/6b5271fad9c44265d5479c6523772808/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/aaba1fb27c8ad198a4f2fae5e0ca700b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/aaba1fb27c8ad198a4f2fae5e0ca700b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/fc9e4eb860165b0243169315639b7c16/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/fc9e4eb860165b0243169315639b7c16/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/2116dd2d298d29c2bc8ff49294ace036/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/2116dd2d298d29c2bc8ff49294ace036/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/2b11598291c660ad4d76f14a65fbf16a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/2b11598291c660ad4d76f14a65fbf16a/AndroidManifest.xml:20:5-44
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Sheila/Desktop/Module Android/app/src/main/AndroidManifest.xml

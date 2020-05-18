@@ -1,0 +1,15 @@
+apply plugin: 'findbugs'
+
+task findbugs(type: FindBugs) {
+    // If necessary
+    // excludeFilter = file("$project.rootDir/tools/rules-findbugs.xml")
+    classes = fileTree("$project.buildDir/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/a92gde/fractart/")
+    source = fileTree("$project.rootDir/src/main/java/com/example/a92gde/fractart/")
+    classpath = files()
+
+    reports {
+        xml.enabled = true
+        html.enabled = false // Activate it if you want
+        html.destination = "$project.buildDir/reports/findbugs/findbugs.html"
+    }
+}
