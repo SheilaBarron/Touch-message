@@ -88,4 +88,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     }
 
+    public void drawGesture(View view){
+        Intent gesture = new Intent(DataExchangingActivity.this,ColorChooser.class );
+        startActivity(gesture);
+    }
+
 }

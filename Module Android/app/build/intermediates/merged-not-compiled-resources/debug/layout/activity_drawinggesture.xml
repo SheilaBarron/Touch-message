@@ -1,0 +1,437 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    android:id="@+id/layout">
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1"
+            android:id="@+id/image11"
+            android:src="@drawable/carre" />
+
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/image12"
+            android:src="@drawable/carre"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/carre"
+            android:id="@+id/image13"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/carre"
+            android:id="@+id/image14"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/carre"
+            android:id="@+id/image15"
+            android:layout_column="5" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image21"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image22"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image23"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image24"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image25"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="5" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image31"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image32"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image33"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image34"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image35"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="5" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image41"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image42"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image43"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image44"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image45"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="5" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image51"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image52"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image53"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image54"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image55"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="5" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image61"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image62"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image63"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image64"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image65"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="5" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image71"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image72"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image73"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image74"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image75"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="5" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image81"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image82"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image83"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image84"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image85"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="5" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image91"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="1" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image92"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="2" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image93"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="3" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image94"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="4" />
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/carre"
+            android:id="@+id/image95"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="5" />
+
+    </TableRow>
+
+</TableLayout>
