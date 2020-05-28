@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Fri May 22 16:10:32 CEST 2020
+#Mon May 25 14:37:37 CEST 2020
 0.baseType=DIRECTORY
-0.base=/home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/build/intermediates/transforms/dexMerger/debug/0
+0.base=/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/transforms/dexMerger/debug/0
 0.path=classes.dex
 0.set=DEX
 count=1

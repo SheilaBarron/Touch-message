@@ -13,9 +13,10 @@ import android.widget.Toast;
 public class ConnexionActivity extends AppCompatActivity implements AsyncResponse {
 
     private Button connexionButton = null;
-    private Button creationButton = null;
     private String user;
     private ClientActivity.MessageGettingTask messageGettingTask;
+
+    private ClientActivity.LoginTask loginResponseTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
 
         connexionButton = (Button) findViewById(R.id.login);
         connexionButton.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View v) {
 
@@ -32,12 +34,29 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
                 EditText usrBox = (EditText) findViewById(R.id.Username);
                 user = usrBox.getText().toString(); //gets you the contents of edit text
 
-                // We call the login function which will execute the asynctask
-                login(user);
+                // we create the chat client:
+                /*
+                try {
+                    ChatClient chatClient = new ChatClient(user);
+                    //chatClient.
 
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+                }
+                */
+
+                // We call the login function which will execute the asynctask
+                //login(user);
                 Intent chat = new Intent(ConnexionActivity.this, DataExchangingActivity.class);
                 chat.putExtra("user", user);
                 startActivity(chat);
+
+                /*
+                Intent chat = new Intent(ConnexionActivity.this, DataExchangingActivity.class);
+                chat.putExtra("user", user);
+                startActivity(chat);
+                */
 
 
                 }
@@ -47,46 +66,62 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
     }
 
 
+
     @Override
     public void processFinish(String output){
         // Here we receive the result fired from async class
         // of onPostExecute(result) method.
         Log.i("Info", "server answer for login: " + output);
 
-        if (messageGettingTask != null ) {
+        if (loginResponseTask != null ) { // messageGettingTask instead
             // && messageGettingTask.getStatus() == AsyncTask.Status.FINISHED
             // stop = true;
 
             if (output != null) {
 
-                Toast.makeText(getApplicationContext(), "connexion validated by server: "+output, Toast.LENGTH_LONG).show();
-                if (output.equals("true")) {
+                Toast.makeText(getApplicationContext(), "Connection validated by server: "+output, Toast.LENGTH_LONG).show();
+                //if (output.equals("true")) {
 
+
+                Intent chat = new Intent(ConnexionActivity.this, DataExchangingActivity.class);
+                chat.putExtra("user", user);
+                startActivity(chat);
+
+                    /*
                     Intent menu = new Intent(ConnexionActivity.this, DataExchangingActivity.class);
                     menu.putExtra("user", user);
                     startActivity(menu);
+                    */
 
-                } else {
-                    // We stay on the same activity
 
-                }
             } else {
                 Toast.makeText(getApplicationContext(), "Waiting for server response ", Toast.LENGTH_LONG).show();
 
             }
+        } else {
+
+            Log.i("Info", "login response task is null");
+
         }
 
     }
 
     public void login(String username) {
 
+        /*
         // We send the connexion data
         ClientActivity.TextSendingTask textSendingTask = new ClientActivity().new TextSendingTask();
-        textSendingTask.execute("LOGINREQUEST;"+username);
-        Log.i("Info", "Message sent to server (code): " + "LOGINREQUEST");
 
+        //textSendingTask.execute("LOGINREQUEST;"+username);
+        textSendingTask.execute(username);
+
+        Log.i("Info", "LOGINREQUEST sent to server for: " + username);
+        */
+
+
+
+        /*
         // We receive the server's answer
-
         //ClientActivity.MessageGettingTask messageGettingTask = new ClientActivity().new MessageGettingTask();
         messageGettingTask = new ClientActivity().new MessageGettingTask();
         // The delegate allows us to get a return value
@@ -94,6 +129,29 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
         String output[] = new String[10];
         messageGettingTask.execute(output);
 
+        Log.i("Info", "Message gotten from server:  "+output);
+        */
+
+
+        //ClientActivity.TextSendingTask textSendingTask = new ClientActivity().new TextSendingTask();
+
+        //textSendingTask.execute("LOGINREQUEST;"+username);
+        //textSendingTask.execute(username);
+
+
+
+        loginResponseTask = new ClientActivity().new LoginTask();
+        // The delegate allows us to get a return value
+        loginResponseTask.delegate = this;
+        String output[] = new String[2];
+        output[0] = username;
+        loginResponseTask.execute(output);
+
+        Log.i("Info", "LOGINREQUEST sent to server for: " + username);
+
+
     }
+
+
 
 }
