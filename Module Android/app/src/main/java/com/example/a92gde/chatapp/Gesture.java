@@ -35,4 +35,24 @@ public class Gesture {
     public String getColor(){
         return color;
     }
+
+    public boolean isIn(int row, int column){
+        for (Box b:gesture){
+            if ((b.getRow()==row) && (b.getColumn()==column)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isEmpty(){
+        if (this.getNumberOfBoxes()==0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public ArrayList<Box> getBoxes(){ return gesture;}
 }

@@ -3,15 +3,18 @@ package com.example.a92gde.chatapp;
 public class Box {
     int column;
     int row;
+    int time;
 
     public Box(){
         column=0;
         row=0;
+        time=0;
     }
 
-    public Box(int c, int r){
+    public Box(int r, int c, int t){
         column=c;
         row=r;
+        time = t;
     }
 
 
@@ -23,6 +26,8 @@ public class Box {
         row=r;
     }
 
+    public void setTime(int t){time =t;}
+
     public int getRow(){
         return row;
     }
@@ -30,5 +35,7 @@ public class Box {
     public int getColumn(){
         return column;
     }
+
+    public int getTime(){return time;}
 
 }

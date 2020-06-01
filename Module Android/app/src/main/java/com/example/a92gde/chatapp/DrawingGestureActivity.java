@@ -24,6 +24,7 @@ public class DrawingGestureActivity extends AppCompatActivity {
     private int[] size;
     private ImageView[][] imageViews;
     private Gesture gesture;
+    private int initial_time;
     private String color;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -150,6 +151,10 @@ public class DrawingGestureActivity extends AppCompatActivity {
         layout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
+                Long tsLong = System.currentTimeMillis()/1000;
+                String ts = tsLong.toString();
+
+
                 size[0]=coord(imageView33)[0]-coord(imageView22)[0];
                 size[1]=coord(imageView33)[1]-coord(imageView22)[1];
 
@@ -160,18 +165,47 @@ public class DrawingGestureActivity extends AppCompatActivity {
 
                 ImageView im = imageViews[row-1][ column-1];
 
-                if(color.equals("Red")){
-                    im.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_rouge));
-                }else{
-                    if(color.equals("Blue")){
-                        im.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_bleu));
-                    }else{
-                        im.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_vert));
+
+                for (int i=0; i<10; i++){
+                    for (int j=0; j< 6; j++){
+                        if((i!=row) | (j!=column)){
+                        if (gesture.isIn(i,j)==true) {
+                            ImageView b = imageViews[i - 1][j - 1];
+                            if (color.equals("Red")) {
+                                b.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_rouge_pale));
+                            } else {
+                                if (color.equals("Blue")) {
+                                    b.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_bleu_pale));
+                                } else {
+                                    b.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_vert_pale));
+                                }
+                            }
+                        }
+                        }
                     }
                 }
 
-                Box box = new Box(column, row);
-                gesture.addBox(box);
+                if( gesture.isIn(row, column)==false) {
+                    if (color.equals("Red")) {
+                        im.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_rouge));
+                    } else {
+                        if (color.equals("Blue")) {
+                            im.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_bleu));
+                        } else {
+                            im.setImageDrawable(ContextCompat.getDrawable(DrawingGestureActivity.this, R.drawable.carre_vert));
+                        }
+                    }
+
+                    if(gesture.isEmpty()==true){
+                        initial_time=Integer.parseInt(ts);
+                        Box box = new Box(row, column, 0);
+                        gesture.addBox(box);
+                    }else{
+                        Box box = new Box(row, column, Integer.parseInt(ts)-initial_time);
+                        gesture.addBox(box);
+                    }
+
+                }
 
                 return true;
             }

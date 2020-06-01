@@ -1213,8 +1213,11 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable carre
 drawable carre_bleu
+drawable carre_bleu_pale
 drawable carre_rouge
+drawable carre_rouge_pale
 drawable carre_vert
+drawable carre_vert_pale
 drawable cat
 drawable cat2
 drawable custom_button
