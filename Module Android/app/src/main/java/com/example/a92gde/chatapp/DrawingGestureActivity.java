@@ -166,6 +166,14 @@ public class DrawingGestureActivity extends AppCompatActivity {
                 ImageView im = imageViews[row-1][ column-1];
 
 
+                switch(event.getAction()) {
+
+                    case MotionEvent.ACTION_UP:
+                        Intent message = new Intent(DrawingGestureActivity.this,DataExchangingActivity.class );
+                        startActivity(message);
+                }
+
+
                 for (int i=0; i<10; i++){
                     for (int j=0; j< 6; j++){
                         if((i!=row) | (j!=column)){

@@ -1,8 +1,9 @@
 package com.example.a92gde.chatapp;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Gesture {
+public class Gesture implements Serializable {
     private ArrayList<Box> gesture;
     private String color;
 
