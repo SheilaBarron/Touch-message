@@ -170,6 +170,7 @@ public class DrawingGestureActivity extends AppCompatActivity {
 
                     case MotionEvent.ACTION_UP:
                         Intent message = new Intent(DrawingGestureActivity.this,DataExchangingActivity.class );
+                        message.putExtra("gesture", gesture);
                         startActivity(message);
                 }
 

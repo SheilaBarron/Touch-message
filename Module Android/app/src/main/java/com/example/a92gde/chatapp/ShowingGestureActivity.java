@@ -26,7 +26,9 @@ public class ShowingGestureActivity extends AppCompatActivity {
     private ImageView[][] imageViews;
     private int initial_time;
     private String color;
+    private Gesture gesture;
     private boolean stop = false;
+    private int interval;
     private Handler handler;
     private Runnable r;
 
@@ -39,6 +41,11 @@ public class ShowingGestureActivity extends AppCompatActivity {
 
         TableLayout layout = (TableLayout) findViewById(R.id.layout);
         imageViews = new ImageView[9][5];
+
+        Intent intent = getIntent();
+        if (intent.hasExtra("gesture")){ // vérifie qu'une valeur est associée à la clé “edittext”
+            gesture = (Gesture) intent.getSerializableExtra("gesture"); // on récupère la valeur associée à la clé
+        }
 
 
         ImageView imageView11 = (ImageView) findViewById(R.id.image11);
@@ -141,82 +148,86 @@ public class ShowingGestureActivity extends AppCompatActivity {
         imageViews[8][4] = imageView95;
 
         handler = new Handler();
+        Box lastBox = gesture.getBoxes().get(gesture.getNumberOfBoxes()-1);
+        Box firstBox = gesture.getBoxes().get(0);
+        interval = (lastBox.getTime()-firstBox.getTime())*1000;
         startRepeatingTask();
 
     }
 
 
 
-    public void showGesture (Gesture gesture) {
+    public void showGesture () {
         r = new Runnable() {
-            int updateInterval = 1000; //=one second
-            int currentIndex = 0;
-            int time = 0;
-            String color = gesture.getColor();
-            ArrayList<Box> boxes = gesture.getBoxes();
+        int currentIndex = 0;
+        int time = 0;
+        String color = gesture.getColor();
+        ArrayList<Box> boxes = gesture.getBoxes();
 
-            @Override
-            public void run() {
+        @Override
+        public void run() {
 
-                if (!stop) {
-                    Box currentBox = boxes.get(currentIndex);
-                    int timestamp = currentBox.getTime();
+            if (stop==false) {
+                Box currentBox = boxes.get(currentIndex);
+                int timestamp = currentBox.getTime();
+                if (time == timestamp) {
+                    int row = currentBox.getRow();
+                    int column = currentBox.getColumn();
 
-                    if (time == timestamp) {
-                        int row = currentBox.getRow();
-                        int column = currentBox.getColumn();
-
-                        ImageView im = imageViews[row - 1][column - 1];
-                        if (currentIndex != gesture.getNumberOfBoxes() - 1) {
-                            if (color.equals("Red")) {
-                                im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_rouge));
-                            } else {
-                                if (color.equals("Green")) {
-                                    im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_vert));
-                                } else {
-                                    im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_bleu));
-                                }
-                            }
+                    ImageView im = imageViews[row - 1][column - 1];
+                    if (color.equals("Red")) {
+                        im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_rouge));
+                    } else {
+                        if (color.equals("Green")) {
+                            im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_vert));
+                        } else {
+                            im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_bleu));
                         }
-
-                        if (currentIndex != 0) {
-                            for (int i = 0; i < currentIndex; i++) {
-                                Box previousBox = boxes.get(i);
-                                int rowPreviousBox = previousBox.getRow();
-                                int columnPreviousBox = previousBox.getColumn();
-
-                                ImageView imPreviousBox = imageViews[rowPreviousBox - 1][columnPreviousBox - 1];
-                                if (color.equals("Red")) {
-                                    im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_rouge_pale));
-                                } else {
-                                    if (color.equals("Green")) {
-                                        im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_vert_pale));
-                                    } else {
-                                        im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_bleu_pale));
-                                    }
-                                }
-                            }
-                        }
-
-                        if (currentIndex == gesture.getNumberOfBoxes() - 1) {
-                            stop = true;
-                        }
-                        currentIndex += 1;
                     }
 
-                    time += 1;
-                } else {
-                    Intent message = new Intent(ShowingGestureActivity.this, DataExchangingActivity.class);
-                    startActivity(message);
+                    if (currentIndex != 0) {
+                        for (int i = 0; i < currentIndex; i++) {
+                            Box previousBox = boxes.get(i);
+                            int rowPreviousBox = previousBox.getRow();
+                            int columnPreviousBox = previousBox.getColumn();
+
+                            ImageView imPreviousBox = imageViews[rowPreviousBox - 1][columnPreviousBox - 1];
+                            if (color.equals("Red")) {
+                                imPreviousBox.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_rouge_pale));
+                            } else {
+                                if (color.equals("Green")) {
+                                    imPreviousBox.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_vert_pale));
+                                } else {
+                                    imPreviousBox.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_bleu_pale));
+                                }
+                            }
+                        }
+                    }
+
+                    if (currentIndex == gesture.getNumberOfBoxes() - 1) {
+                        stop = true;
+                    }
+                    System.out.println(currentIndex);
+                    currentIndex += 1;
                 }
 
-
+                else{time += 1;}
+                handler.postDelayed(r, interval);
+            } else {
+                Intent message = new Intent(ShowingGestureActivity.this, DataExchangingActivity.class);
+                startActivity(message);
             }
-        };
+
+
+        }
+    };
+
+    r.run();
     }
 
     void startRepeatingTask() {
-        r.run();
+        System.out.println("started repeating task");
+        showGesture();
     }
 
     @Override

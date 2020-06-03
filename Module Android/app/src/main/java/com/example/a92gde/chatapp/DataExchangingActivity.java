@@ -38,6 +38,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     //private static String separator = ";";
 
     private static String username;
+    private Gesture gesture;
 
     ArrayList<String> messages = new ArrayList<>();
     public ListView chatListView;
@@ -51,7 +52,12 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         setContentView(R.layout.activity_chat);
 
         Intent intent = getIntent();
-        username = intent.getStringExtra("user");
+        if (intent.hasExtra("user")) {
+            username = intent.getStringExtra("user");
+        }
+
+
+
 
         chatListView = (ListView) findViewById(R.id.chatListView);
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, messages);
@@ -66,7 +72,14 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
 
 
+        // QUAND TU AS RÉCUPÉRÉ LE GESTE, IL FAUT EXÉCUTER CES TROIS LIGNES
+        /*Intent intent_test = new Intent(DataExchangingActivity.this,ShowingGestureActivity.class );
+        intent_test.putExtra("gesture", gesture);
+        startActivity(intent_test);*/
+
+
     }
+    
 
     @Override
     public void onBackPressed() {

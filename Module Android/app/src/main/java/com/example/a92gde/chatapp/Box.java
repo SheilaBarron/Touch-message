@@ -1,6 +1,8 @@
 package com.example.a92gde.chatapp;
 
-public class Box {
+import java.io.Serializable;
+
+public class Box implements Serializable {
     int column;
     int row;
     int time;
