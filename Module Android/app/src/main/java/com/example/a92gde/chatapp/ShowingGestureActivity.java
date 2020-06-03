@@ -24,11 +24,11 @@ public class ShowingGestureActivity extends AppCompatActivity {
 
     private int[] size;
     private ImageView[][] imageViews;
-    private Gesture gesture;
     private int initial_time;
     private String color;
     private boolean stop = false;
     private Handler handler;
+    private Runnable r;
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -145,71 +145,75 @@ public class ShowingGestureActivity extends AppCompatActivity {
 
     }
 
-Runnable r = new Runnable() {
-    int updateInterval = 1000; //=one second
-    int currentIndex = 0;
-    int time = 0;
-    String color = gesture.getColor();
-    ArrayList<Box> boxes = gesture.getBoxes();
 
-    @Override
-    public void run() {
 
-        if(!stop) {
-            Box currentBox = boxes.get(currentIndex);
-            int timestamp = currentBox.getTime();
+    public void showGesture (Gesture gesture) {
+        r = new Runnable() {
+            int updateInterval = 1000; //=one second
+            int currentIndex = 0;
+            int time = 0;
+            String color = gesture.getColor();
+            ArrayList<Box> boxes = gesture.getBoxes();
 
-            if (time == timestamp) {
-                int row = currentBox.getRow();
-                int column = currentBox.getColumn();
+            @Override
+            public void run() {
 
-                ImageView im = imageViews[row - 1][column - 1];
-                if (currentIndex != gesture.getNumberOfBoxes() - 1) {
-                    if (color.equals("Red")) {
-                        im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_rouge));
-                    } else {
-                        if (color.equals("Green")) {
-                            im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_vert));
-                        } else {
-                            im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_bleu));
-                        }
-                    }
-                }
+                if (!stop) {
+                    Box currentBox = boxes.get(currentIndex);
+                    int timestamp = currentBox.getTime();
 
-                if (currentIndex != 0) {
-                    for (int i = 0; i < currentIndex; i++) {
-                        Box previousBox = boxes.get(i);
-                        int rowPreviousBox = previousBox.getRow();
-                        int columnPreviousBox = previousBox.getColumn();
+                    if (time == timestamp) {
+                        int row = currentBox.getRow();
+                        int column = currentBox.getColumn();
 
-                        ImageView imPreviousBox = imageViews[rowPreviousBox - 1][columnPreviousBox - 1];
-                        if (color.equals("Red")) {
-                            im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_rouge_pale));
-                        } else {
-                            if (color.equals("Green")) {
-                                im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_vert_pale));
+                        ImageView im = imageViews[row - 1][column - 1];
+                        if (currentIndex != gesture.getNumberOfBoxes() - 1) {
+                            if (color.equals("Red")) {
+                                im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_rouge));
                             } else {
-                                im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_bleu_pale));
+                                if (color.equals("Green")) {
+                                    im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_vert));
+                                } else {
+                                    im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_bleu));
+                                }
                             }
                         }
+
+                        if (currentIndex != 0) {
+                            for (int i = 0; i < currentIndex; i++) {
+                                Box previousBox = boxes.get(i);
+                                int rowPreviousBox = previousBox.getRow();
+                                int columnPreviousBox = previousBox.getColumn();
+
+                                ImageView imPreviousBox = imageViews[rowPreviousBox - 1][columnPreviousBox - 1];
+                                if (color.equals("Red")) {
+                                    im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_rouge_pale));
+                                } else {
+                                    if (color.equals("Green")) {
+                                        im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_vert_pale));
+                                    } else {
+                                        im.setImageDrawable(ContextCompat.getDrawable(ShowingGestureActivity.this, R.drawable.carre_bleu_pale));
+                                    }
+                                }
+                            }
+                        }
+
+                        if (currentIndex == gesture.getNumberOfBoxes() - 1) {
+                            stop = true;
+                        }
+                        currentIndex += 1;
                     }
+
+                    time += 1;
+                } else {
+                    Intent message = new Intent(ShowingGestureActivity.this, DataExchangingActivity.class);
+                    startActivity(message);
                 }
 
-                if (currentIndex == gesture.getNumberOfBoxes() - 1) {
-                    stop = true;
-                }
-                currentIndex += 1;
+
             }
-
-            time+=1;
-        }else{
-            Intent message = new Intent(ShowingGestureActivity.this,DataExchangingActivity.class );
-            startActivity(message);
-        }
-
-
+        };
     }
-};
 
     void startRepeatingTask() {
         r.run();
@@ -231,4 +235,6 @@ Runnable r = new Runnable() {
         im.getLocationOnScreen(coordinates);
         return coordinates;
     }
+
+
 }
