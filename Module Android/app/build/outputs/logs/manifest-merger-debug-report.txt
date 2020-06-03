@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
+ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
 MERGED from [com.github.nisrulz:screenshott:2.0.0] /home/dom/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/4ba734375b8325e6fe94c4d4ad76dd93/AndroidManifest.xml:17:1-30:12
 MERGED from [org.joml:joml-android:1.9.3-SNAPSHOT] /home/dom/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/53dbb335dd48bcbd99e95e11f4d81180/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:design:28.0.0] /home/dom/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6ac61ea0cb365cb3282ed4ce6ddc1bd7/AndroidManifest.xml:17:1-24:12
@@ -37,20 +37,20 @@ MERGED from [com.android.support:interpolator:28.0.0] /home/dom/.gradle/caches/t
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/dom/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/9ffd9c5ff3ef594eb5ad6864b831b7e4/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/dom/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/6f6dda76a4c76287d547ecdaac71f619/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /home/dom/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/463cc3cad724b3b57b35f4425fd663e6/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:3:5-41
 		INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml
-		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
+		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
 		INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml
-		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-44:12
+		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:1-45:12
 		INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:2:11-69
@@ -101,7 +101,7 @@ ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Androi
 	android:required
 		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:21:52-75
 application
-ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:24:5-42:19
+ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:24:5-43:19
 MERGED from [com.github.nisrulz:screenshott:2.0.0] /home/dom/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/4ba734375b8325e6fe94c4d4ad76dd93/AndroidManifest.xml:27:5-28:19
 MERGED from [com.github.nisrulz:screenshott:2.0.0] /home/dom/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/4ba734375b8325e6fe94c4d4ad76dd93/AndroidManifest.xml:27:5-28:19
 MERGED from [com.android.support:design:28.0.0] /home/dom/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/6ac61ea0cb365cb3282ed4ce6ddc1bd7/AndroidManifest.xml:22:5-20
@@ -152,6 +152,10 @@ activity#com.example.a92gde.chatapp.ColorChooser
 ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:41:9-76
 	android:name
 		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:41:19-73
+activity#com.example.a92gde.chatapp.ShowingGestureActivity
+ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:42:9-60
+	android:name
+		ADDED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml:42:19-57
 uses-sdk
 INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/src/main/AndroidManifest.xml

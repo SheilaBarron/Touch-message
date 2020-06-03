@@ -39,6 +39,7 @@
         <activity android:name="com.example.a92gde.chatapp.DataExchangingActivity" />
         <activity android:name="com.example.a92gde.chatapp.DrawingGestureActivity" />
         <activity android:name="com.example.a92gde.chatapp.ColorChooser" />
+        <activity android:name=".ShowingGestureActivity" />
     </application>
 
 </manifest>

@@ -1667,6 +1667,7 @@ layout activity_drawinggesture
 layout activity_friends
 layout activity_gesture_color
 layout activity_image_display
+layout activity_showinggesture
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
