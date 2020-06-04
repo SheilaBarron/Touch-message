@@ -10,13 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ConnexionActivity extends AppCompatActivity implements AsyncResponse {
+public class ConnexionActivity extends AppCompatActivity {//implements AsyncResponse {
 
     private Button connexionButton = null;
     private String user;
-    private ClientActivity.MessageGettingTask messageGettingTask;
+    //private ClientActivity.MessageGettingTask messageGettingTask;
 
-    private ClientActivity.LoginTask loginResponseTask;
+   // private ClientActivity.LoginTask loginResponseTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +66,7 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
     }
 
 
-
+    /*
     @Override
     public void processFinish(String output){
         // Here we receive the result fired from async class
@@ -92,7 +92,7 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
                     menu.putExtra("user", user);
                     startActivity(menu);
                     */
-
+        /*
 
             } else {
                 Toast.makeText(getApplicationContext(), "Waiting for server response ", Toast.LENGTH_LONG).show();
@@ -106,7 +106,11 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
 
     }
 
-    public void login(String username) {
+
+         */
+
+        // TODO: delete this
+   // public void login(String username) {
 
         /*
         // We send the connexion data
@@ -138,7 +142,7 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
         //textSendingTask.execute("LOGINREQUEST;"+username);
         //textSendingTask.execute(username);
 
-
+    /*
 
         loginResponseTask = new ClientActivity().new LoginTask();
         // The delegate allows us to get a return value
@@ -151,6 +155,7 @@ public class ConnexionActivity extends AppCompatActivity implements AsyncRespons
 
 
     }
+    */
 
 
 

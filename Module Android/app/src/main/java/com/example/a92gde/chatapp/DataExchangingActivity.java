@@ -16,7 +16,11 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -27,9 +31,13 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     final Handler handler = new Handler();
     private boolean end = false;
     private static final int SERVER_PORT = 8010;
-    private static final String SERVER_IP = "192.168.1.64"; // ju lille
-    DataOutputStream dout;
-    DataInputStream din;
+    private static final String SERVER_IP = "10.30.220.126"; // mease
+
+    // private static final String SERVER_IP = "192.168.1.64"; // ju lille
+    ObjectOutputStream objectOutputStream;
+    //DataOutputStream dout;
+    ObjectInputStream objectInputStream;
+    //DataInputStream din;
     Socket socketChars;
 
     private ImageView imageView;
@@ -56,8 +64,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
             username = intent.getStringExtra("user");
         }
 
-
-
+        Log.i("Info", "NAME OF USER:"+username);
 
         chatListView = (ListView) findViewById(R.id.chatListView);
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, messages);
@@ -68,7 +75,16 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         chatTask.execute();
 
         //String messageToSend = username;
-        sendMessageToServer(username);
+        //sendMessageToServer(username);
+        /*
+        String response = null;
+        try {
+            response = objectInputStream.readUTF();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Log.i("Info", "LOGIN RESPONSE FROM SERVER: " + response);
+        */
 
 
 
@@ -88,7 +104,77 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         super.onBackPressed();
     }
 
+
+    public class ChatTask extends AsyncTask<String, Void, String> {
+
+        // In order to get a return message
+        public AsyncResponse delegate = null;
+
+        @Override
+        protected String doInBackground(String... params) {
+
+            try {
+                socketChars = new Socket(SERVER_IP, SERVER_PORT); // Connect to the socket
+
+                Log.i("Info", "CONNECTING TO SERVER");
+
+                OutputStream outputStream = socketChars.getOutputStream();
+                objectOutputStream = new ObjectOutputStream(outputStream);
+                //dout = new DataOutputStream(socketChars.getOutputStream());
+
+                InputStream inputStream = socketChars.getInputStream();
+                objectInputStream = new ObjectInputStream(inputStream);
+                //din = new DataInputStream(socketChars.getInputStream());
+
+                //sendMessageToServer(username);
+
+                if(objectInputStream == null || objectOutputStream == null) {
+
+                    Log.i("Info", "NULL stream");
+                }
+
+                sendMessageToServer(username);
+
+                /*
+                String response = null;
+                try {
+                    response = objectInputStream.readObject().toString();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Log.i("Info", "LOGIN RESPONSE FROM SERVER: " + response);
+
+                 */
+                startServerSocket();
+
+
+            } catch (IOException  e) { //| ClassNotFoundException e
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+
+
+        /*
+
+        protected void onPause(){
+            this.cancel(false);
+        }
+        */
+
+        protected void onPostExecute(String result) {
+
+            delegate.processFinish(result);
+
+        }
+
+
+    }
+
     private void startServerSocket() {
+
 
         Thread thread = new Thread(new Runnable() {
 
@@ -97,11 +183,15 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
             @Override
             public void run() {
 
+                Log.i("Info", "We started the server connexion");
+
                 try {
 
                     while (!end) {
 
-                        stringData = din.readUTF();
+                        stringData = objectInputStream.readObject().toString();
+                        //stringData = objectInputStream.readUTF();
+                        //stringData = din.readUTF();
 
                         if (stringData != null) {
 
@@ -116,7 +206,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
                     }
 
-                } catch (IOException e) {
+                    //socket.close();
+
+                } catch (IOException | ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             }
@@ -145,45 +237,6 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         });
     }
 
-    public class ChatTask extends AsyncTask<String, Void, String> {
-
-        // In order to get a return message
-        public AsyncResponse delegate = null;
-
-        @Override
-        protected String doInBackground(String... params) {
-
-            try {
-                socketChars = new Socket(SERVER_IP, SERVER_PORT); // Connect to the socket
-                din = new DataInputStream(socketChars.getInputStream());
-                dout = new DataOutputStream(socketChars.getOutputStream());
-                startServerSocket();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return null;
-        }
-
-
-
-        /*
-
-        protected void onPause(){
-            this.cancel(false);
-        }
-        */
-
-        protected void onPostExecute(String result) {
-
-            delegate.processFinish(result);
-
-        }
-
-
-    }
-
 
     // Send text button pressed
     public void sendChat(View view) {
@@ -208,6 +261,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         TextSendingTask textSendingTask = new TextSendingTask();
         textSendingTask.execute(message);
+        Log.i("Info", "We should send a message to the server");
 
     }
 
@@ -224,7 +278,10 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
                 Log.i("Info", "Message sent to server: " + strings[0]);
 
-                dout.writeUTF(strings[0]);
+                objectOutputStream.writeObject(strings[0]);
+                objectOutputStream.reset();
+                //objectOutputStream.writeUTF(strings[0]);
+                //dout.writeUTF(strings[0]);
 
 
 
@@ -256,6 +313,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         startActivity(gesture);
     }
 
+    /*
     public void getMessageFromServer () {
 
 
@@ -268,6 +326,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         // results will be in the output postexecute
 
     }
+    */
 
 
 }
