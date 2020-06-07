@@ -52,6 +52,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     public ListView chatListView;
     public ArrayAdapter arrayAdapter;
 
+    private Gesture g;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,10 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         }
 
         Log.i("Info", "NAME OF USER:"+username);
+
+        if(intent.hasExtra("gesture")){
+            g = (Gesture) intent.getSerializableExtra("gesture");
+        }
 
         chatListView = (ListView) findViewById(R.id.chatListView);
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, messages);
@@ -93,6 +98,14 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         intent_test.putExtra("gesture", gesture);
         startActivity(intent_test);*/
 
+
+    }
+
+    public void show(View view) {
+
+        Intent intent_test = new Intent(DataExchangingActivity.this,ShowingGestureActivity.class );
+        intent_test.putExtra("gesture", g);
+        startActivity(intent_test);
 
     }
     

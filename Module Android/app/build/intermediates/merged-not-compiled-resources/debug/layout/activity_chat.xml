@@ -25,10 +25,18 @@ tools:context='.DataExchangingActivity'
 <ListView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_above="@+id/chatEditText"
+    android:layout_above="@+id/showGestureButton"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
     android:id="@+id/chatListView" />
+
+    <Button
+        android:text="Show gesture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sendChatButton"
+        android:id="@+id/showGestureButton"
+        android:onClick="show" />
 
 <Button
     android:text="Send"

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Jun 04 12:34:55 CEST 2020
+#Thu Jun 04 14:02:05 CEST 2020
 0.baseType=DIRECTORY
 0.base=/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/transforms/dexMerger/debug/0
 0.path=classes.dex

@@ -1548,6 +1548,7 @@ id sendImageButton
 id sendTextButton
 id shortcut
 id showCustom
+id showGestureButton
 id showHome
 id showTitle
 id sin

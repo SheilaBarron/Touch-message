@@ -1,4 +1,4 @@
-#Thu Jun 04 12:34:55 CEST 2020
+#Sun Jun 07 18:30:27 CEST 2020
 base.0=/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

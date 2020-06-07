@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/layout_design_text_input_password_icon.xml.flat",
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/res/layout/design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -52,12 +52,12 @@
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/interpolator_mtrl_fast_out_slow_in.xml.flat",
-        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/res/interpolator/mtrl_fast_out_slow_in.xml"
-    },
-    {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-v21_abc_dialog_material_background.xml.flat",
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-v21/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/interpolator_mtrl_fast_out_slow_in.xml.flat",
+        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/res/interpolator/mtrl_fast_out_slow_in.xml"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -80,12 +80,12 @@
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/color_abc_tint_btn_checkable.xml.flat",
-        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/color/abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_green_24dp.xml.flat",
         "source": "/Users/Sheila/Desktop/Touch/Module Android/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_green_24dp.xml"
+    },
+    {
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/color_abc_tint_btn_checkable.xml.flat",
+        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/color/abc_tint_btn_checkable.xml"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/layout_abc_search_dropdown_item_icons_2line.xml.flat",
@@ -96,24 +96,24 @@
         "source": "/Users/Sheila/Desktop/Touch/Module Android/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_red_24dp.png"
     },
     {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_dark.xml.flat",
-        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable_abc_ic_voice_search_api_material.xml.flat",
+        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable/abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_design_ic_visibility.png.flat",
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/res/drawable-xhdpi-v4/design_ic_visibility.png"
     },
     {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable_abc_ic_voice_search_api_material.xml.flat",
-        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable/abc_ic_voice_search_api_material.xml"
-    },
-    {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_crop_rotate_24dp.png.flat",
-        "source": "/Users/Sheila/Desktop/Touch/Module Android/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_crop_rotate_24dp.png"
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_dark.xml.flat",
+        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/anim_design_bottom_sheet_slide_in.xml.flat",
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/res/anim/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_crop_rotate_24dp.png.flat",
+        "source": "/Users/Sheila/Desktop/Touch/Module Android/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_crop_rotate_24dp.png"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -152,12 +152,12 @@
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable_tooltip_frame_dark.xml.flat",
-        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable/tooltip_frame_dark.xml"
-    },
-    {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable_tooltip_frame_dark.xml.flat",
+        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable/tooltip_frame_dark.xml"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/layout_support_simple_spinner_dropdown_item.xml.flat",
@@ -272,12 +272,12 @@
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/layout_activity_gesture_color.xml.flat",
-        "source": "/Users/Sheila/Desktop/Touch/Module Android/app/src/main/res/layout/activity_gesture_color.xml"
-    },
-    {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/layout_activity_gesture_color.xml.flat",
+        "source": "/Users/Sheila/Desktop/Touch/Module Android/app/src/main/res/layout/activity_gesture_color.xml"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/layout_abc_expanded_menu_layout.xml.flat",
@@ -300,12 +300,12 @@
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/animator_mtrl_btn_state_list_anim.xml.flat",
-        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/res/animator/mtrl_btn_state_list_anim.xml"
-    },
-    {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/animator_mtrl_btn_state_list_anim.xml.flat",
+        "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/res/animator/mtrl_btn_state_list_anim.xml"
     },
     {
         "merged": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/res/merged/debug/interpolator_mtrl_linear_out_slow_in.xml.flat",
