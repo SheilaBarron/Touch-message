@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/9b82c7f828b6796f10023c49955775a2/res/values-v16/values-v16.xml",
+                    "source": "/home/dom/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/7da973f9999be07b9f914fc4bc6dab08/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/values-v16/values-v16.xml",
+                    "source": "/home/dom/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/221c56fe9745734cbfffe06a69f84e0c/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

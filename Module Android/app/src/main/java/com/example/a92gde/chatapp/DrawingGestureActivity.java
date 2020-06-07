@@ -24,7 +24,7 @@ public class DrawingGestureActivity extends AppCompatActivity {
     private int[] size;
     private ImageView[][] imageViews;
     private Gesture gesture;
-    private int initial_time;
+    private Long initial_time;
     private String color;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -151,7 +151,7 @@ public class DrawingGestureActivity extends AppCompatActivity {
         layout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
-                Long tsLong = System.currentTimeMillis()/1000;
+                Long tsLong = System.currentTimeMillis();
                 String ts = tsLong.toString();
 
 
@@ -206,13 +206,15 @@ public class DrawingGestureActivity extends AppCompatActivity {
                     }
 
                     if(gesture.isEmpty()==true){
-                        initial_time=Integer.parseInt(ts);
+                        initial_time=Long.parseLong(ts);
                         Box box = new Box(row, column, 0);
                         gesture.addBox(box);
                     }else{
-                        Box box = new Box(row, column, Integer.parseInt(ts)-initial_time);
+                        Box box = new Box(row, column, (int)(Long.parseLong(ts)-initial_time));
+                        System.out.println((int)(Long.parseLong(ts)-initial_time));
                         gesture.addBox(box);
                     }
+
 
                 }
 

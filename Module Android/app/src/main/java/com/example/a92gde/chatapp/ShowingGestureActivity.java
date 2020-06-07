@@ -147,10 +147,9 @@ public class ShowingGestureActivity extends AppCompatActivity {
         imageViews[8][3] = imageView94;
         imageViews[8][4] = imageView95;
 
-        handler = new Handler();
         Box lastBox = gesture.getBoxes().get(gesture.getNumberOfBoxes()-1);
         Box firstBox = gesture.getBoxes().get(0);
-        interval = (lastBox.getTime()-firstBox.getTime())*1000;
+        interval = 1;
         startRepeatingTask();
 
     }
@@ -158,6 +157,7 @@ public class ShowingGestureActivity extends AppCompatActivity {
 
 
     public void showGesture () {
+        handler = new Handler();
         r = new Runnable() {
         int currentIndex = 0;
         int time = 0;
@@ -217,7 +217,6 @@ public class ShowingGestureActivity extends AppCompatActivity {
                 Intent message = new Intent(ShowingGestureActivity.this, DataExchangingActivity.class);
                 startActivity(message);
             }
-
 
         }
     };
