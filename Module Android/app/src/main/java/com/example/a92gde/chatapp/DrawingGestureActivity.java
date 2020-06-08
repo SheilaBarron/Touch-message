@@ -206,8 +206,8 @@ public class DrawingGestureActivity extends AppCompatActivity {
                 }
 
 
-                for (int i=0; i<10; i++){
-                    for (int j=0; j< 6; j++){
+                for (int i=0; i<11; i++){
+                    for (int j=0; j< 7; j++){
                         if((i!=row) | (j!=column)){
                         if (gesture.isIn(i,j)==true) {
                             ImageView b = imageViews[i - 1][j - 1];
