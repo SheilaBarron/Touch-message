@@ -601,7 +601,10 @@
             android:id="@+id/image84"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_column="4" />
+            android:layout_column="4"
+            android:padding="1dip"
+            android:divider="@color/black"
+            android:showDividers="middle"/>
 
         <ImageView
             android:scaleType="fitXY"
