@@ -1,8 +1,11 @@
 package com.example.a92gde.chatapp;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Box implements Serializable {
+
+    public static final long serialVersionUID = 1L;
     int column;
     int row;
     int time;
@@ -17,6 +20,14 @@ public class Box implements Serializable {
         column=c;
         row=r;
         time = t;
+    }
+
+    public Box(Box b){
+
+        this.column = b.column;
+        this.row = b.row;
+        this.time = b.time;
+
     }
 
 

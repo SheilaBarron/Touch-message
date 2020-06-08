@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Gesture implements Serializable {
+
+    public static final long serialVersionUID = 1L;
     private ArrayList<Box> gesture;
     private String color;
 
@@ -11,6 +13,13 @@ public class Gesture implements Serializable {
         gesture = new ArrayList<Box>();
         color="Red";
     }
+
+    public Gesture(Gesture g){
+
+        this.gesture = new ArrayList<Box>(g.gesture);
+        this.color = g.color;
+    }
+
 
     public Gesture(String co){
         gesture = new ArrayList<Box>();

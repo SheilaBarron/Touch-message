@@ -202,18 +202,31 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
                     while (!end) {
 
-                        stringData = objectInputStream.readObject().toString();
+                        Object receivedObj = objectInputStream.readObject();
+                        stringData = receivedObj.toString();
                         //stringData = objectInputStream.readUTF();
                         //stringData = din.readUTF();
 
                         if (stringData != null) {
 
-                            //messages.add("Server: " + stringData);
-                            //arrayAdapter.notifyDataSetChanged();
-                            updateUI(stringData);
+                            Gesture receivedGest = new Gesture();
+                            if (receivedObj.getClass().equals(receivedGest.getClass())) { // gesture
+
+                                receivedGest = new Gesture((Gesture)receivedObj); // we have the gesture
+                                Intent intent_test = new Intent(DataExchangingActivity.this,ShowingGestureActivity.class );
+                                intent_test.putExtra("gesture", receivedGest);
+                                startActivity(intent_test);
+
+
+                            } else { // text
+                                //messages.add("Server: " + stringData);
+                                //arrayAdapter.notifyDataSetChanged();
+                                updateUI(stringData);
+
+
+                            }
 
                             Log.i("Info", "FROM SERVER - " + stringData);
-
                         }
 
 
@@ -274,6 +287,22 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         TextSendingTask textSendingTask = new TextSendingTask();
         textSendingTask.execute(message);
+
+
+        if (g != null && !g.isEmpty()) {
+
+            GestureSendingTask gestureSendingTask = new GestureSendingTask();
+            gestureSendingTask.execute(g);
+        }
+
+
+
+
+       /*
+        Gesture gestureObj = new Gesture();
+        GestureSendingTask gestureSendingTask = new GestureSendingTask();
+        gestureSendingTask.execute(gestureObj);
+        */
         Log.i("Info", "We should send a message to the server");
 
     }
@@ -292,6 +321,35 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                 Log.i("Info", "Message sent to server: " + strings[0]);
 
                 objectOutputStream.writeObject(strings[0]);
+                objectOutputStream.reset();
+                //objectOutputStream.writeUTF(strings[0]);
+                //dout.writeUTF(strings[0]);
+
+
+
+            } catch (IOException e) {
+
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+    }
+
+    public class GestureSendingTask extends AsyncTask<Gesture, Void, Void> {
+
+
+        @Override
+        protected Void doInBackground(Gesture... gestures) {
+
+            try {
+
+
+                Log.i("Info", "We are trying to send a message to the server");
+
+                Log.i("Info", "Message sent to server: " + gestures[0]);
+
+                objectOutputStream.writeObject(gestures[0]);
                 objectOutputStream.reset();
                 //objectOutputStream.writeUTF(strings[0]);
                 //dout.writeUTF(strings[0]);
