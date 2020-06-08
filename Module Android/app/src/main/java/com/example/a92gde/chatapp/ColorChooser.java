@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class ColorChooser extends AppCompatActivity {
     private RadioButton red;
@@ -17,6 +18,7 @@ public class ColorChooser extends AppCompatActivity {
     private Button validate;
     private RadioGroup group;
     private String color;
+    private TextView chooseColorText ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class ColorChooser extends AppCompatActivity {
         green = (RadioButton) findViewById(R.id.radioButton3);
         validate=(Button)findViewById(R.id.button);
         group = (RadioGroup)findViewById(R.id.radioGroup);
+        chooseColorText = (TextView)findViewById(R.id.textView) ;
     }
 
     public void drawGesture(View v){
@@ -43,6 +46,14 @@ public class ColorChooser extends AppCompatActivity {
         else{
             System.out.println("Nothing selected from Radio Group.");
         }
+        //get the items transparents
+        red.setAlpha(0);
+        blue.setAlpha(0);
+        green.setAlpha(0);
+        chooseColorText.setAlpha(0);
+        validate.setAlpha(0);
+
+        //start a new activity
         Intent intent = new Intent(ColorChooser.this,DrawingGestureActivity.class );
         intent.putExtra("color", color);
         startActivity(intent);
