@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ColorChooser">
+    tools:context=".ColorChooser"
+    android:background="@color/transparent">
 
 
     <TextView
@@ -25,7 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:alpha="0.5"
+        android:textColor="@color/black">
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -35,7 +38,9 @@
             android:text="Red"
             android:textSize="25dp"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:alpha="0.75"
+            android:textColor="@color/red_primary_dark"/>
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -44,7 +49,9 @@
             android:text="Blue"
             android:textSize="25dp"
             app:layout_constraintStart_toStartOf="@+id/radioButton"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+            app:layout_constraintTop_toBottomOf="@+id/radioButton"
+            android:alpha="0.75"
+            android:textColor="@color/blue_primary_dark"/>
 
         <RadioButton
             android:id="@+id/radioButton3"
@@ -53,7 +60,9 @@
             android:text="Green"
             android:textSize="25dp"
             app:layout_constraintStart_toStartOf="@+id/radioButton2"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/radioButton2"
+            android:alpha="0.75"
+            android:textColor="@color/green_primary_dark"/>
 
     </RadioGroup>
 
@@ -67,6 +76,7 @@
         android:text="OK"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:alpha="0.75"/>
 
 </android.support.constraint.ConstraintLayout>
