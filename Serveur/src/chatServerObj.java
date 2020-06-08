@@ -1,12 +1,15 @@
 import java.net.*;
 import java.util.*;
 import java.io.*;
+import com.example.a92gde.chatapp.*;
+
 
 class chatServerObj {
 
 	static Vector ClientSockets;
 	static Vector LoginNames;
 	static final int SERVER_PORT = 8010;
+	
 	
 	HashMap<String, ObjectInputStream> objectInputStreams = new HashMap<String, ObjectInputStream>();
 	HashMap<String, ObjectOutputStream> objectOutputStreams = new HashMap<String, ObjectOutputStream>();
@@ -107,15 +110,25 @@ class chatServerObj {
 			while (true) {
 
 				try {
+					
+					
 					String msgFromClient = new String();
 					
-					msgFromClient = objectInputStreams.get(LoginName).readObject().toString();
-			
+					Object objectFromClient = objectInputStreams.get(LoginName).readObject(); // could be a gesture
+							
+					msgFromClient = objectFromClient.toString();
+					
+		
 					StringTokenizer st = new StringTokenizer(msgFromClient);
-
-					String login = st.nextToken();    
-
-					String MsgType = st.nextToken();
+					
+					String firstItem = "";
+					String MsgType = "";
+					
+					if (st.hasMoreTokens()) 
+					firstItem = st.nextToken();   
+					
+					if (st.hasMoreTokens()) 
+					MsgType = st.nextToken();
 
 					int iCount = 0;
 
@@ -124,11 +137,11 @@ class chatServerObj {
 						for (iCount = 0; iCount<LoginNames.size(); iCount++) {
 
 
-							if (LoginNames.elementAt(iCount).equals(login)) {
+							if (LoginNames.elementAt(iCount).equals(firstItem)) {
 
 								LoginNames.removeElementAt(iCount);
 								ClientSockets.removeElementAt(iCount);
-								System.out.println("User " + login +" Logged Out ...");
+								System.out.println("User " + firstItem +" Logged Out ...");
 
 								break;
 
@@ -139,7 +152,7 @@ class chatServerObj {
 						// broadcast the logout message 
 						for (iCount = 0; iCount<LoginNames.size(); iCount++) {			
 
-							String msg="User " + login +" Logged Out ...";
+							String msg="User " + firstItem +" Logged Out ...";
 
 							Socket tSoc=(Socket)ClientSockets.elementAt(iCount);   
 						
@@ -148,17 +161,17 @@ class chatServerObj {
 						
 						}
 
-					} else {
+					} else if (MsgType.equals("DATA")) {
 
-						String msg=login+ " says: ";
+						String msg = firstItem+ " says: ";
 
 						while(st.hasMoreTokens()) {
-							msg = msg+" " +st.nextToken();
+							msg = msg +" " +st.nextToken();
 						}
 
 						for (iCount=0;iCount<LoginNames.size();iCount++) {
 
-							if(!LoginNames.elementAt(iCount).equals(login)) { 
+							if(!LoginNames.elementAt(iCount).equals(firstItem)) { 
 
 								Socket tSoc=(Socket)ClientSockets.elementAt(iCount); 
 							
@@ -167,11 +180,36 @@ class chatServerObj {
 								
 								//tdout.writeUTF(msg);                            
 
-
 							}
 						}
 
 
+					} else {
+						
+						System.out.println("Received: " + firstItem);
+						
+						System.out.println("The class of the object is: " + objectFromClient.getClass());
+						
+						Gesture receivedGesture = new Gesture((Gesture)objectFromClient);
+						
+						System.out.println("The colors of the received gesture is: " + receivedGesture.getColor());
+						
+						for (iCount=0;iCount<LoginNames.size();iCount++) {
+
+							if(!LoginNames.elementAt(iCount).equals(firstItem)) { 
+
+								Socket tSoc=(Socket)ClientSockets.elementAt(iCount); 
+							
+								objectOutputStreams.get(LoginNames.get(iCount)).writeObject(receivedGesture);
+								objectOutputStreams.get(LoginNames.get(iCount)).reset();
+								
+								//tdout.writeUTF(msg);                            
+
+							}
+						}
+
+						
+						
 					}
 
 					if (MsgType.equals("LOGOUT")) {
