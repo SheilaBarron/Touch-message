@@ -40,7 +40,7 @@
 
         </activity>
 
-
+        <!--
         <activity android:name="com.example.a92gde.chatapp.DataExchangingActivity"
             android:theme="@style/AppTheme"></activity>
 
@@ -51,10 +51,8 @@
             android:theme="@style/Theme.Transparent"></activity>
         
         <activity android:name=".ShowingGestureActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"></activity> -->
 
-        <activity android:name=".BlankFragment"
-            android:theme="@style/AppTheme"></activity>
 
 
     </application>
