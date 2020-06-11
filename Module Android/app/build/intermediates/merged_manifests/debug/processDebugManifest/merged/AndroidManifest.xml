@@ -48,18 +48,18 @@
         <activity
             android:name="com.example.a92gde.chatapp.DataExchangingActivity"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name="com.example.a92gde.chatapp.DrawingGestureActivity"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name="com.example.a92gde.chatapp.ColorChooser"
-            android:theme="@style/Theme.Transparent" />
-        <activity
-            android:name="com.example.a92gde.chatapp.ShowingGestureActivity"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name="com.example.a92gde.chatapp.BlankFragment"
-            android:theme="@style/AppTheme" />
+
+        <!--
+        <activity android:name="com.example.a92gde.chatapp.DrawingGestureActivity"
+            android:theme="@style/Theme.Transparent"></activity>
+
+        <activity android:name="com.example.a92gde.chatapp.ColorChooser"
+            android:theme="@style/Theme.Transparent"></activity>
+        
+        <activity android:name=".ShowingGestureActivity"
+            android:theme="@style/AppTheme"></activity>
+        -->
+
     </application>
 
 </manifest>

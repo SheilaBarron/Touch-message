@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
+ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
 MERGED from [com.github.nisrulz:screenshott:2.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/13589b519245a2f072968b2d807d5b5b/AndroidManifest.xml:17:1-30:12
 MERGED from [org.joml:joml-android:1.9.3-SNAPSHOT] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/a34b8bb6477161ed9b2421b7631b6be2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:design:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/AndroidManifest.xml:17:1-24:12
@@ -39,20 +39,20 @@ MERGED from [com.android.support:interpolator:28.0.0] /Users/Sheila/.gradle/cach
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/fc9e4eb860165b0243169315639b7c16/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/2116dd2d298d29c2bc8ff49294ace036/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/2b11598291c660ad4d76f14a65fbf16a/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
-INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
+INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
 	package
 		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:3:5-41
 		INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
+		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
 		INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-62:12
+		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:1-61:12
 		INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:2:11-69
@@ -103,7 +103,7 @@ ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManife
 	android:required
 		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:21:52-75
 application
-ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:24:5-60:19
+ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:24:5-59:19
 MERGED from [com.github.nisrulz:screenshott:2.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/13589b519245a2f072968b2d807d5b5b/AndroidManifest.xml:27:5-28:19
 MERGED from [com.github.nisrulz:screenshott:2.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/screenshott-2.0.0.aar/13589b519245a2f072968b2d807d5b5b/AndroidManifest.xml:27:5-28:19
 MERGED from [com.android.support:design:28.0.0] /Users/Sheila/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/5b02148d6fb6f6051089695b79941934/AndroidManifest.xml:22:5-20
@@ -148,30 +148,6 @@ ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManife
 		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:45:13-44
 	android:name
 		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:44:19-83
-activity#com.example.a92gde.chatapp.DrawingGestureActivity
-ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:47:9-48:65
-	android:theme
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:48:13-53
-	android:name
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:47:19-83
-activity#com.example.a92gde.chatapp.ColorChooser
-ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:50:9-51:65
-	android:theme
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:51:13-53
-	android:name
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:50:19-73
-activity#com.example.a92gde.chatapp.ShowingGestureActivity
-ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:53:9-54:56
-	android:theme
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:54:13-44
-	android:name
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:53:19-57
-activity#com.example.a92gde.chatapp.BlankFragment
-ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:56:9-57:56
-	android:theme
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:57:13-44
-	android:name
-		ADDED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml:56:19-48
 uses-sdk
 INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/Sheila/Desktop/Touch/Module Android/app/src/main/AndroidManifest.xml

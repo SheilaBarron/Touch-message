@@ -40,10 +40,11 @@
 
         </activity>
 
-        <!--
+
         <activity android:name="com.example.a92gde.chatapp.DataExchangingActivity"
             android:theme="@style/AppTheme"></activity>
 
+        <!--
         <activity android:name="com.example.a92gde.chatapp.DrawingGestureActivity"
             android:theme="@style/Theme.Transparent"></activity>
 
