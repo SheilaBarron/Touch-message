@@ -20,6 +20,7 @@ import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
+@Deprecated
 public class ShowingGestureActivity extends AppCompatActivity {
 
     private int[] size;

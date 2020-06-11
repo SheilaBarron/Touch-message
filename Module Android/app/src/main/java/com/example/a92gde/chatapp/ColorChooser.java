@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
+@Deprecated
 public class ColorChooser extends AppCompatActivity {
     private RadioButton red;
     private RadioButton green;

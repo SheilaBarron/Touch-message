@@ -19,6 +19,7 @@ import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
+@Deprecated
 public class DrawingGestureActivity extends AppCompatActivity {
 
     private int[] size;

@@ -32,12 +32,13 @@ android:launchMode="singleTop"
     android:id="@+id/chatListView" />
 
     <Button
-        android:text="Show gesture"
+        android:id="@+id/showGestureButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/sendChatButton"
-        android:id="@+id/showGestureButton"
-        android:onClick="show" />
+        android:visibility="gone"
+        android:clickable="false"
+        android:text="Show gesture" />
 
 <Button
     android:text="Send"
@@ -48,12 +49,12 @@ android:launchMode="singleTop"
     android:id="@+id/sendChatButton"
     android:onClick="sendChat" />
 
-<Button
-    android:text="Gesture"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:id="@+id/drawGestureButton"
-    android:onClick="drawGesture" />
+    <Button
+        android:id="@+id/drawGestureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="selectGestureColor"
+        android:text="Gesture" />
 
 </RelativeLayout>

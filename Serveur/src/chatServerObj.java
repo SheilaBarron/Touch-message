@@ -6,8 +6,8 @@ import com.example.a92gde.chatapp.*;
 
 class chatServerObj {
 
-	static Vector ClientSockets;
-	static Vector LoginNames;
+	static Vector clientSockets;
+	static Vector loginNames;
 	static final int SERVER_PORT = 8010;
 	
 	
@@ -18,8 +18,8 @@ class chatServerObj {
 
 		ServerSocket soc = new ServerSocket(SERVER_PORT);
 
-		ClientSockets = new Vector();
-		LoginNames = new Vector();
+		clientSockets = new Vector();
+		loginNames = new Vector();
 
 		while(true) {  
 			// accept client connection
@@ -38,7 +38,6 @@ class chatServerObj {
 	class AcceptClient extends Thread {
 
 		Socket ClientSocket;
-
 		
 		ObjectInputStream objectInputStream;
 		ObjectOutputStream objectOutputStream;
@@ -72,18 +71,17 @@ class chatServerObj {
 			
 					System.out.println("User Logged In :" + LoginName);
 
-					LoginNames.add(LoginName);
-					ClientSockets.add(ClientSocket); 
+					loginNames.add(LoginName);
+					clientSockets.add(ClientSocket); 
 					
 
-
-					for (int iCount = 0; iCount<LoginNames.size(); iCount++) {
+					for (int iCount = 0; iCount<loginNames.size(); iCount++) {
 
 						String msg = "User " + LoginName +" joined the chatroom.";				
-						Socket tSoc = (Socket)ClientSockets.elementAt(iCount);      
+						Socket tSoc = (Socket)clientSockets.elementAt(iCount);      
 					
-						objectOutputStreams.get(LoginNames.get(iCount)).writeObject(msg);
-						objectOutputStreams.get(LoginNames.get(iCount)).reset();		
+						objectOutputStreams.get(loginNames.get(iCount)).writeObject(msg);
+						objectOutputStreams.get(loginNames.get(iCount)).reset();		
 
 					}
 					
@@ -99,7 +97,6 @@ class chatServerObj {
 
 				e.printStackTrace();
 			}
-			
 			
 
 		}
@@ -118,7 +115,6 @@ class chatServerObj {
 							
 					msgFromClient = objectFromClient.toString();
 					
-		
 					StringTokenizer st = new StringTokenizer(msgFromClient);
 					
 					String firstItem = "";
@@ -134,13 +130,13 @@ class chatServerObj {
 
 					if (MsgType.equals("LOGOUT")) {
 
-						for (iCount = 0; iCount<LoginNames.size(); iCount++) {
+						for (iCount = 0; iCount<loginNames.size(); iCount++) {
 
 
-							if (LoginNames.elementAt(iCount).equals(firstItem)) {
+							if (loginNames.elementAt(iCount).equals(firstItem)) {
 
-								LoginNames.removeElementAt(iCount);
-								ClientSockets.removeElementAt(iCount);
+								loginNames.removeElementAt(iCount);
+								clientSockets.removeElementAt(iCount);
 								System.out.println("User " + firstItem +" Logged Out ...");
 
 								break;
@@ -150,18 +146,18 @@ class chatServerObj {
 						}
 
 						// broadcast the logout message 
-						for (iCount = 0; iCount<LoginNames.size(); iCount++) {			
+						for (iCount = 0; iCount<loginNames.size(); iCount++) {			
 
 							String msg="User " + firstItem +" Logged Out ...";
 
-							Socket tSoc=(Socket)ClientSockets.elementAt(iCount);   
+							Socket tSoc=(Socket)clientSockets.elementAt(iCount);   
 						
-							objectOutputStreams.get(LoginNames.get(iCount)).writeObject(msg);
-							objectOutputStreams.get(LoginNames.get(iCount)).reset();
+							objectOutputStreams.get(loginNames.get(iCount)).writeObject(msg);
+							objectOutputStreams.get(loginNames.get(iCount)).reset();
 						
 						}
 
-					} else if (MsgType.equals("DATA")) {
+					} else if (MsgType.equals("DATA")) { // TEXT MESSAGES
 
 						String msg = firstItem+ " says: ";
 
@@ -169,22 +165,20 @@ class chatServerObj {
 							msg = msg +" " +st.nextToken();
 						}
 
-						for (iCount=0;iCount<LoginNames.size();iCount++) {
+						for (iCount=0;iCount<loginNames.size();iCount++) {
 
-							if(!LoginNames.elementAt(iCount).equals(firstItem)) { 
+							if(!loginNames.elementAt(iCount).equals(firstItem)) { 
 
-								Socket tSoc=(Socket)ClientSockets.elementAt(iCount); 
+								Socket tSoc=(Socket)clientSockets.elementAt(iCount); 
 							
-								objectOutputStreams.get(LoginNames.get(iCount)).writeObject(msg);
-								objectOutputStreams.get(LoginNames.get(iCount)).reset();
-								
-								//tdout.writeUTF(msg);                            
-
+								objectOutputStreams.get(loginNames.get(iCount)).writeObject(msg);
+								objectOutputStreams.get(loginNames.get(iCount)).reset();
+					
 							}
 						}
 
 
-					} else {
+					} else { // GESTURE OBJECT MESSAGES 
 						
 						System.out.println("Received: " + firstItem);
 						
@@ -192,18 +186,22 @@ class chatServerObj {
 						
 						Gesture receivedGesture = new Gesture((Gesture)objectFromClient);
 						
-						System.out.println("The colors of the received gesture is: " + receivedGesture.getColor());
+						String sender_user = receivedGesture.getOwner_user();
 						
-						for (iCount=0;iCount<LoginNames.size();iCount++) {
+						System.out.println("The owner user of the received gesture is: " + receivedGesture.getOwner_user());
+						
+						for (iCount=0;iCount<loginNames.size();iCount++) {
 
-							if(!LoginNames.elementAt(iCount).equals(firstItem)) { 
-
-								Socket tSoc=(Socket)ClientSockets.elementAt(iCount); 
-							
-								objectOutputStreams.get(LoginNames.get(iCount)).writeObject(receivedGesture);
-								objectOutputStreams.get(LoginNames.get(iCount)).reset();
+							if(!loginNames.elementAt(iCount).equals(sender_user)) { 
 								
-								//tdout.writeUTF(msg);                            
+					
+								System.out.println("The user : " + loginNames.elementAt(iCount)+ " receives the gestured colored: "+ receivedGesture.getColor());
+
+								Socket tSoc=(Socket)clientSockets.elementAt(iCount); 
+								objectOutputStreams.get(loginNames.get(iCount)).writeObject(receivedGesture);
+								objectOutputStreams.get(loginNames.get(iCount)).reset();
+								
+							                      
 
 							}
 						}

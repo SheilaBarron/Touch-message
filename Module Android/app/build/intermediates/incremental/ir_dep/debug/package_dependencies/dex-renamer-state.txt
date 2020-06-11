@@ -1,4 +1,0 @@
-#Sun May 19 20:30:25 CEST 2019
-base.0=/Users/Sheila/Desktop/PAN4/pact52/Module Android/app/build/intermediates/transforms/dexMerger/debug/10
-path.0=classes.dex
-renamed.0=classes.dex

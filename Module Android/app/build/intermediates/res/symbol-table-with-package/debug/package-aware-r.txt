@@ -15,6 +15,8 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim enter_from_right
+anim exit_to_right
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -851,6 +853,7 @@ color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color orange_primary
 color orange_primary_dark
 color pink_primary
@@ -1113,6 +1116,10 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 dimen start_page_image_size
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen text_margin
 dimen text_margin_small
 dimen text_margin_very_small
@@ -1299,6 +1306,7 @@ id SHOW_PROGRESS
 id SYM
 id Username
 id accelerate
+id action0
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1320,8 +1328,6 @@ id actions
 id activity_chat
 id activity_chooser_view_content
 id add
-id addFriendButton
-id addFriendText
 id alertTitle
 id aligned
 id all
@@ -1341,8 +1347,9 @@ id blocking
 id bottom
 id bounce
 id button
-id button3
 id buttonPanel
+id button_fragment
+id cancel_action
 id center
 id center_horizontal
 id center_vertical
@@ -1387,7 +1394,10 @@ id easeIn
 id easeInOut
 id easeOut
 id edit_query
+id edittext
+id edittext_fragment
 id end
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -1400,7 +1410,7 @@ id filled
 id fixed
 id flip
 id forever
-id friendsListView
+id fragment_container
 id ghost_view
 id gone
 id graph
@@ -1476,7 +1486,6 @@ id image93
 id image94
 id image95
 id image96
-id imageView
 id info
 id invisible
 id italic
@@ -1494,6 +1503,7 @@ id listMode
 id list_item
 id login
 id masked
+id media_actions
 id message
 id middle
 id mini
@@ -1530,7 +1540,6 @@ id radioButton3
 id radioGroup
 id ratio
 id rectangles
-id requestImageButton
 id reverseSawtooth
 id right
 id right_icon
@@ -1558,9 +1567,6 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id sendChatButton
-id sendFloatButton
-id sendImageButton
-id sendTextButton
 id shortcut
 id showCustom
 id showGestureButton
@@ -1587,6 +1593,7 @@ id startHorizontal
 id startVertical
 id staticLayout
 id staticPostLayout
+id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
@@ -1680,9 +1687,8 @@ layout abc_tooltip
 layout activity_chat
 layout activity_connexion
 layout activity_drawinggesture
-layout activity_friends
 layout activity_gesture_color
-layout activity_image_display
+layout activity_main
 layout activity_showinggesture
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1698,12 +1704,22 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fragment_blank
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout select_dialog_item_material
@@ -1762,6 +1778,7 @@ string character_counter_pattern
 string country_prompt
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string large_text
 string mtrl_chip_close_icon_content_description
@@ -2061,9 +2078,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow
