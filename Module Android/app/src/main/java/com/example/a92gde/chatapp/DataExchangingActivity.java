@@ -1,11 +1,15 @@
 package com.example.a92gde.chatapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.RequiresApi;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -60,6 +64,20 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     private Gesture g;
     private String color;
 
+    private ImageView imageView ;
+    private ImageView imageViewGesture ;
+    private Bitmap bitmap ;
+
+    /*---------------------------------Take a screen shot of the chat-----------------------------*/
+
+    public Bitmap screenShot(View view) {
+        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(),
+                view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        view.draw(canvas);
+        return bitmap;
+    }
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -87,6 +105,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         ChatTask chatTask = new ChatTask();
         chatTask.delegate = this;
         chatTask.execute();
+
+        //bitmap = screenShot(getWindow().getDecorView().getRootView()) ;
+
 
 
     }
@@ -219,7 +240,6 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         chatEditText.setText("");
         messages.add("You say: "+messageContent);
         arrayAdapter.notifyDataSetChanged();
-
     }
 
 
@@ -318,8 +338,13 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         });
     }
 
+
+
     /*---------------------------------SELECT COLOR OF GESTURE------------------------------------*/
     public void selectGestureColor(View view) {
+
+
+        bitmap = screenShot(getWindow().getDecorView().getRootView()) ;
 
         setContentView(R.layout.activity_gesture_color);
 
@@ -331,6 +356,10 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         Button validate=(Button)findViewById(R.id.button);
         RadioGroup group = (RadioGroup)findViewById(R.id.radioGroup);
         TextView chooseColorText = (TextView)findViewById(R.id.textView) ;
+
+        //Set the backgrond imageView
+        imageView = (ImageView) findViewById(R.id.imageView) ;
+        imageView.setImageBitmap(bitmap);
 
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -370,9 +399,14 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     private Long initial_time;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void startDrawing() {
+    public void startDrawing()
+    {
 
         setContentView(R.layout.activity_drawinggesture);
+
+        imageViewGesture = (ImageView) findViewById(R.id.imageViewGesture) ;
+        imageViewGesture.setImageBitmap(bitmap);
+
 
         int[] size;
         ImageView[][] imageViews;

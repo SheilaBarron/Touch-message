@@ -1,4 +1,18 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/colorConstrainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/imageViewGesture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"/>
+
+<TableLayout
     android:id="@+id/layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -785,3 +799,5 @@
     </TableRow>
 
 </TableLayout>
+
+    </android.support.constraint.ConstraintLayout>
