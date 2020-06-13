@@ -1,5 +1,6 @@
 package com.example.a92gde.chatapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -8,6 +9,8 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
@@ -47,8 +50,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     private static final int SERVER_PORT = 8010;
     // TODO : put your compute's IP@
-    private static final String SERVER_IP = "10.30.220.126"; // mease
+    //private static final String SERVER_IP = "10.30.220.126"; // mease
     // private static final String SERVER_IP = "192.168.1.64"; // ju lille
+    private static final String SERVER_IP = "80.214.117.18"; // dom 4G
 
     private ObjectOutputStream objectOutputStream;
     private ObjectInputStream objectInputStream;
@@ -562,6 +566,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         size=new int[2];
 
         layout.setOnTouchListener(new View.OnTouchListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public boolean onTouch(View view, MotionEvent event) {
                 Long tsLong = System.currentTimeMillis();
@@ -577,7 +582,6 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                 int row = (int)Math.floor(y/size[1])+1;
 
                 ImageView im = imageViews[row-1][ column-1];
-
 
                 switch(event.getAction()) {
 
@@ -628,6 +632,12 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                 }
 
                 if( gesture.isIn(row, column)==false) {
+                    long[] mVibratePattern = new long[]{0, 100};
+                    int[] mAmplitudes = new int[]{0, (row-1)*255/10};
+                    System.out.println(mAmplitudes[1]);
+                    Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    VibrationEffect effect = VibrationEffect.createWaveform(mVibratePattern, mAmplitudes, -1);
+                    v.vibrate(effect);
                     if (color.equals("Red")) {
                         im.setImageDrawable(ContextCompat.getDrawable(DataExchangingActivity.this, R.drawable.carre_rouge));
                     } else {
@@ -833,6 +843,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                     String color = gesture.getColor();
                     ArrayList<Box> boxes = gesture.getBoxes();
 
+                    @RequiresApi(api = Build.VERSION_CODES.O)
                     @Override
                     public void run() {
 
@@ -842,6 +853,12 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                             if (time == timestamp) {
                                 int row = currentBox.getRow();
                                 int column = currentBox.getColumn();
+                                long[] mVibratePattern = new long[]{0, 100};
+                                int[] mAmplitudes = new int[]{0, (row-1)*255/10};
+                                System.out.println(mAmplitudes[1]);
+                                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                                VibrationEffect effect = VibrationEffect.createWaveform(mVibratePattern, mAmplitudes, -1);
+                                v.vibrate(effect);
 
                                 ImageView im = imageViews[row - 1][column - 1];
                                 if (color.equals("Red")) {
