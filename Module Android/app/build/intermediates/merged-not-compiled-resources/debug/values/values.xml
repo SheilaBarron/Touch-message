@@ -82,6 +82,7 @@
     <attr format="float" name="flow_horizontalAlign">
         <enum name="start" value="0"/>
         <enum name="end" value="1"/>
+        <enum name="center" value="2"/>
     </attr>
     <attr format="float" name="flow_horizontalBias"/>
     <attr format="dimension" name="flow_horizontalGap"/>
@@ -1834,9 +1835,10 @@
             <flag name="jumpToEnd" value="0x100"/>
             <flag name="jumpToStart" value="0x1000"/>
         </attr></declare-styleable>
-    <declare-styleable name="OnSwipe"><attr format="float" name="dragScale"/><attr format="float" name="maxVelocity"/><attr format="float" name="maxAcceleration"/><attr name="dragDirection"/><attr name="touchAnchorId"/><attr name="touchAnchorSide"/><attr format="reference" name="touchRegionId"/><attr format="flags" name="nestedScrollFlags">
+    <declare-styleable name="OnSwipe"><attr format="float" name="dragScale"/><attr format="float" name="maxVelocity"/><attr format="float" name="maxAcceleration"/><attr name="dragDirection"/><attr name="touchAnchorId"/><attr name="touchAnchorSide"/><attr format="reference" name="touchRegionId"/><attr format="reference" name="limitBoundsTo"/><attr format="flags" name="nestedScrollFlags">
             <flag name="none" value="0"/>
             <flag name="disablePostScroll" value="1"/>
+            <flag name="disableScroll" value="2"/>
         </attr><attr format="boolean" name="moveWhenScrollAtTop"/><attr format="enum" name="onTouchUp">
             <enum name="autoComplete" value="0"/>
             <enum name="autoCompleteToStart" value="1"/>

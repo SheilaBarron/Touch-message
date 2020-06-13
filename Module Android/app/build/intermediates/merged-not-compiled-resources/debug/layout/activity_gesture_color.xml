@@ -2,10 +2,20 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/colorConstrainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ColorChooser"
-    android:background="@color/transparent">
+    android:background="@color/transparent"
+    tools:context=".ColorChooser">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:alpha="0.5"/>
 
 
     <TextView
@@ -14,12 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="153dp"
         android:text="Gesture's color:"
+        android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:alpha="0.5"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <RadioGroup
@@ -27,10 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:alpha="0.5"
-        android:textColor="@color/black">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -38,33 +46,30 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
             android:text="Red"
+            android:textColor="@color/red_primary_dark"
             android:textSize="25dp"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:alpha="0.75"
-            android:textColor="@color/red_primary_dark"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Blue"
+            android:textColor="@color/blue_primary_dark"
             android:textSize="25dp"
             app:layout_constraintStart_toStartOf="@+id/radioButton"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton"
-            android:alpha="0.75"
-            android:textColor="@color/blue_primary_dark"/>
+            app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Green"
+            android:textColor="@color/green_primary_dark"
             android:textSize="25dp"
             app:layout_constraintStart_toStartOf="@+id/radioButton2"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton2"
-            android:alpha="0.75"
-            android:textColor="@color/green_primary_dark"/>
+            app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
 
     </RadioGroup>
 
@@ -78,7 +83,7 @@
         android:text="OK"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        android:alpha="0.75"/>
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
 
 </android.support.constraint.ConstraintLayout>

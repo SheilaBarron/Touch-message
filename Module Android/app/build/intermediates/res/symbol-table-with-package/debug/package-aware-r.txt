@@ -424,6 +424,7 @@ attr layout_optimizationLevel
 attr layout_scrollFlags
 attr layout_scrollInterpolator
 attr liftOnScroll
+attr limitBoundsTo
 attr lineHeight
 attr lineSpacing
 attr listChoiceBackgroundIndicator
@@ -1218,6 +1219,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bubble_a
+drawable bubble_b
 drawable carre
 drawable carre_bleu
 drawable carre_bleu_pale
@@ -1362,6 +1365,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id colorConstrainLayout
 id container
 id content
 id contentPanel
@@ -1383,6 +1387,7 @@ id dimensions
 id direct
 id disableHome
 id disablePostScroll
+id disableScroll
 id dragDown
 id dragEnd
 id dragLeft
@@ -1486,6 +1491,8 @@ id image93
 id image94
 id image95
 id image96
+id imageView
+id imageViewGesture
 id info
 id invisible
 id italic
@@ -1573,6 +1580,8 @@ id showGestureButton
 id showHome
 id showTitle
 id sin
+id singleMessage
+id singleMessageContainer
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1685,6 +1694,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chat
+layout activity_chat_singlemessage
 layout activity_connexion
 layout activity_drawinggesture
 layout activity_gesture_color
@@ -2375,7 +2385,7 @@ styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
 styleable NavigationView android_background android_fitsSystemWindows android_maxWidth elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconTint itemTextAppearance itemTextColor menu
 styleable OnClick clickAction targetId
-styleable OnSwipe dragDirection dragScale maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp touchAnchorId touchAnchorSide touchRegionId
+styleable OnSwipe dragDirection dragScale limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode

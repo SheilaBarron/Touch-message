@@ -59,7 +59,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     private ArrayList<String> messages = new ArrayList<>();
     private ListView chatListView;
-    private ArrayAdapter arrayAdapter;
+    private ChatArrayAdapter arrayAdapter;
 
     private Gesture g;
     private String color;
@@ -67,7 +67,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     private ImageView imageView ;
     private ImageView imageViewGesture ;
     private Bitmap bitmap ;
-
+    private boolean side = false;
     /*---------------------------------Take a screen shot of the chat-----------------------------*/
 
     public Bitmap screenShot(View view) {
@@ -99,7 +99,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         }*/
 
         chatListView = (ListView) findViewById(R.id.chatListView);
-        arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, messages);
+        arrayAdapter = new ChatArrayAdapter(this, android.R.layout.simple_list_item_1, messages);
         chatListView.setAdapter(arrayAdapter);
 
         ChatTask chatTask = new ChatTask();
@@ -239,6 +239,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         chatEditText.setText("");
         messages.add("You say: "+messageContent);
+        arrayAdapter.add(new ChatMessage(side, messageContent));
         arrayAdapter.notifyDataSetChanged();
     }
 
@@ -316,6 +317,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
             Log.i("Info", "Server message: " + output);
 
             messages.add("You say:" + output);
+            side=true;
+            arrayAdapter.add(new ChatMessage(side, output));
+            side=false;
             arrayAdapter.notifyDataSetChanged();
         }
 
@@ -588,7 +592,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                         layout.setVisibility(View.INVISIBLE);
                         setContentView(R.layout.activity_chat);
                         chatListView = (ListView) findViewById(R.id.chatListView);
-                        arrayAdapter = new ArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, messages);
+                        arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, messages);
                         chatListView.setAdapter(arrayAdapter);
                         arrayAdapter.notifyDataSetChanged();
 
@@ -886,7 +890,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                             layout.setVisibility(View.INVISIBLE);
                             setContentView(R.layout.activity_chat);
                             chatListView = (ListView) findViewById(R.id.chatListView);
-                            arrayAdapter = new ArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, messages);
+                            arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, messages);
                             chatListView.setAdapter(arrayAdapter);
                             arrayAdapter.notifyDataSetChanged();
 
