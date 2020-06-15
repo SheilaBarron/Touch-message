@@ -50,9 +50,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     private static final int SERVER_PORT = 8010;
     // TODO : put your compute's IP@
-    //private static final String SERVER_IP = "10.30.220.126"; // mease
+    private static final String SERVER_IP = "10.30.220.126"; // mease
     // private static final String SERVER_IP = "192.168.1.64"; // ju lille
-    private static final String SERVER_IP = "80.214.117.18"; // dom 4G
+    //private static final String SERVER_IP = "46.193.3.148"; // dom wifi
 
     private ObjectOutputStream objectOutputStream;
     private ObjectInputStream objectInputStream;

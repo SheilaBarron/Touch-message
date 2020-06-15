@@ -1,4 +1,4 @@
-#Mon Jun 15 11:51:24 CEST 2020
+#Mon Jun 15 12:14:37 CEST 2020
 base.0=/home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
