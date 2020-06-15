@@ -918,7 +918,17 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                             layout.setVisibility(View.INVISIBLE);
                             setContentView(R.layout.activity_chat);
                             chatListView = (ListView) findViewById(R.id.chatListView);
-                            arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, messages);
+                            arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, new ArrayList<String>());
+                            for (int i=0; i<messages.size(); i++){
+                                String m = messages.get(i);
+                                int position = m.indexOf("You say");
+                                if (position ==-1){
+                                    arrayAdapter.add(new ChatMessage(true, m));
+                                }else{
+                                    m= m.replace("You say: ", "");
+                                    arrayAdapter.add(new ChatMessage(false,  m));
+                                }
+                            }
                             chatListView.setAdapter(arrayAdapter);
                             arrayAdapter.notifyDataSetChanged();
 
