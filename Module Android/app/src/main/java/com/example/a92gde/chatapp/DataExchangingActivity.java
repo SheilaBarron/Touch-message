@@ -321,9 +321,6 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
             Log.i("Info", "Server message: " + output);
 
             messages.add("You say:" + output);
-            side=true;
-            arrayAdapter.add(new ChatMessage(side, output));
-            side=false;
             arrayAdapter.notifyDataSetChanged();
         }
 
@@ -339,6 +336,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                 if (stringData.trim().length() != 0){
                     messages.add(stringData);
                     if(arrayAdapter != null)
+                        side=true;
+                        arrayAdapter.add(new ChatMessage(side, stringData));
+                        side=false;
                         arrayAdapter.notifyDataSetChanged();
                 }
 
