@@ -61,7 +61,8 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     private static String separator = " ";
     private static String username;
 
-    private ArrayList<String> messages = new ArrayList<>();
+    private ArrayList<String> messages = new ArrayList<String>();
+    private ArrayList<String> chatMessages = new ArrayList<String>();
     private ListView chatListView;
     private ChatArrayAdapter arrayAdapter;
 
@@ -103,7 +104,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         }*/
 
         chatListView = (ListView) findViewById(R.id.chatListView);
-        arrayAdapter = new ChatArrayAdapter(this, android.R.layout.simple_list_item_1, messages);
+        arrayAdapter = new ChatArrayAdapter(this, android.R.layout.simple_list_item_1, chatMessages);
         chatListView.setAdapter(arrayAdapter);
 
         ChatTask chatTask = new ChatTask();
@@ -596,7 +597,17 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                         layout.setVisibility(View.INVISIBLE);
                         setContentView(R.layout.activity_chat);
                         chatListView = (ListView) findViewById(R.id.chatListView);
-                        arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, messages);
+                        arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, new ArrayList<String>());
+                        for (int i=0; i<messages.size(); i++){
+                            String m = messages.get(i);
+                            int position = m.indexOf("You say");
+                            if (position ==-1){
+                                arrayAdapter.add(new ChatMessage(true, m));
+                            }else{
+                                m= m.replace("You say: ", "");
+                                arrayAdapter.add(new ChatMessage(false,  m));
+                            }
+                        }
                         chatListView.setAdapter(arrayAdapter);
                         arrayAdapter.notifyDataSetChanged();
 
