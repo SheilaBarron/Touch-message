@@ -131,6 +131,8 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         super.onBackPressed();
     }
 
+    /*-------------------------------------REPLAY GESTURE-------------------------------------------*/
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void replayGesture(View view) {
         if(latestGesture==null || alreadyReplayed==true){
@@ -411,6 +413,106 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         });
     }
 
+    /*-------------------------------------GESTURE MENU-------------------------------------------*/
+
+    public void selectGesture(View view){
+        setContentView(R.layout.activity_gesturemenu);
+    }
+
+
+    /*-------------------------------------LIBRARY-------------------------------------------*/
+
+    public void library(View view){
+        setContentView(R.layout.activity_library);
+    }
+
+    public void sendCaress(View view){
+
+        // WE HAVE TO DEFINE THE GESTURE
+
+        TableLayout layout = (TableLayout) findViewById(R.id.layout);
+        AlertDialog.Builder builder = new AlertDialog.Builder(DataExchangingActivity.this);
+        builder.setTitle("Your caress has been sent");
+        builder.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(DataExchangingActivity.this, "Your caress has been sent.", Toast.LENGTH_SHORT).show();
+
+                        layout.setVisibility(View.INVISIBLE);
+                        setContentView(R.layout.activity_chat);
+                        chatListView = (ListView) findViewById(R.id.chatListView);
+                        arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, new ArrayList<String>());
+                        for (int i = 0; i < messages.size(); i++) {
+                            String m = messages.get(i);
+                            int position = m.indexOf("You say");
+                            if (position == -1) {
+                                arrayAdapter.add(new ChatMessage(true, m));
+                            } else {
+                                m = m.replace("You say: ", "");
+                                arrayAdapter.add(new ChatMessage(false, m));
+                            }
+                        }
+                        chatListView.setAdapter(arrayAdapter);
+                        arrayAdapter.notifyDataSetChanged();
+
+                        if (chatListView == null)
+                            Log.i("Info", "Problems with the list view");
+
+                        if (arrayAdapter == null)
+                            Log.i("Info", "Problems with the array adapter ");
+
+                        if (messages.isEmpty())
+                            Log.i("Info", "Problems with the messages ");
+                    }
+                });
+
+        builder.show();
+
+    }
+
+    public void sendSlap(View view){
+
+        // WE HAVE TO DEFINE THE GESTURE
+
+        TableLayout layout = (TableLayout) findViewById(R.id.layout);
+        AlertDialog.Builder builder = new AlertDialog.Builder(DataExchangingActivity.this);
+        builder.setTitle("Your slap has been sent");
+        builder.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(DataExchangingActivity.this, "Your slap has been sent.", Toast.LENGTH_SHORT).show();
+
+                        layout.setVisibility(View.INVISIBLE);
+                        setContentView(R.layout.activity_chat);
+                        chatListView = (ListView) findViewById(R.id.chatListView);
+                        arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, new ArrayList<String>());
+                        for (int i = 0; i < messages.size(); i++) {
+                            String m = messages.get(i);
+                            int position = m.indexOf("You say");
+                            if (position == -1) {
+                                arrayAdapter.add(new ChatMessage(true, m));
+                            } else {
+                                m = m.replace("You say: ", "");
+                                arrayAdapter.add(new ChatMessage(false, m));
+                            }
+                        }
+                        chatListView.setAdapter(arrayAdapter);
+                        arrayAdapter.notifyDataSetChanged();
+
+                        if (chatListView == null)
+                            Log.i("Info", "Problems with the list view");
+
+                        if (arrayAdapter == null)
+                            Log.i("Info", "Problems with the array adapter ");
+
+                        if (messages.isEmpty())
+                            Log.i("Info", "Problems with the messages ");
+                    }
+                });
+
+        builder.show();
+
+    }
 
 
     /*---------------------------------SELECT COLOR OF GESTURE------------------------------------*/

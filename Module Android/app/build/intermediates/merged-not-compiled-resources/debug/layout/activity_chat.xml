@@ -59,7 +59,7 @@ android:launchMode="singleTop"
     android:scaleType="centerCrop"
     android:padding="0dp"
     android:background="@drawable/hand"
-    android:onClick="selectGestureColor" />
+    android:onClick="selectGesture" />
 
 <ImageButton
     android:id="@+id/replayGesture"

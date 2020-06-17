@@ -1221,6 +1221,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable bubble_a
 drawable bubble_b
+drawable caress
 drawable carre
 drawable carre_bleu
 drawable carre_bleu_pale
@@ -1295,6 +1296,7 @@ drawable radio_selector
 drawable replay
 drawable round_button
 drawable side_nav_bar
+drawable slap
 drawable sphere_sponge
 drawable spinner_bg
 drawable tooltip_frame_dark
@@ -1352,9 +1354,12 @@ id blocking
 id bottom
 id bounce
 id button
+id button1
+id button2
 id buttonPanel
 id button_fragment
 id cancel_action
+id caress
 id center
 id center_horizontal
 id center_vertical
@@ -1585,6 +1590,7 @@ id showTitle
 id sin
 id singleMessage
 id singleMessageContainer
+id slap
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1701,6 +1707,8 @@ layout activity_chat_singlemessage
 layout activity_connexion
 layout activity_drawinggesture
 layout activity_gesture_color
+layout activity_gesturemenu
+layout activity_library
 layout activity_main
 layout activity_showinggesture
 layout design_bottom_navigation_item
