@@ -65,6 +65,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     private ArrayList<String> chatMessages = new ArrayList<String>();
     private ListView chatListView;
     private ChatArrayAdapter arrayAdapter;
+    private Gesture latestGesture;
 
     private Gesture g;
     private String color;
@@ -124,6 +125,15 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         sendMessageToServer(username+separator+"LOGOUT");
         super.onBackPressed();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void replayGesture(View view) {
+        if(latestGesture==null){
+            System.out.println("no gesture");
+        }else{
+            showGestureUI(latestGesture);
+        }
     }
 
     /*-------------------------------------TASKS/SERVER-------------------------------------------*/
@@ -201,6 +211,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                             if (receivedObj.getClass().equals(receivedGest.getClass())) { // gesture
 
                                 receivedGest = new Gesture((Gesture)receivedObj); // we have the gesture
+                                latestGesture = receivedGest;
                                 showGestureUI(receivedGest);
 
                                 //Intent intent_test = new Intent(DataExchangingActivity.this,ShowingGestureActivity.class );

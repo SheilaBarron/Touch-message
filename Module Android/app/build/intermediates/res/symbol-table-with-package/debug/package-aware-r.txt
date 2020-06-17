@@ -1242,6 +1242,7 @@ drawable devise_sans_blanc_ni_noir
 drawable dodecahedron
 drawable f3d
 drawable fractale3d
+drawable hand
 drawable ic_blue_24dp
 drawable ic_camera_enhance_black_24dp
 drawable ic_check_white
@@ -1291,6 +1292,7 @@ drawable octahedral_ifs
 drawable octahedralifs
 drawable parisguidetower
 drawable radio_selector
+drawable replay
 drawable round_button
 drawable side_nav_bar
 drawable sphere_sponge
@@ -1547,6 +1549,7 @@ id radioButton3
 id radioGroup
 id ratio
 id rectangles
+id replayGesture
 id reverseSawtooth
 id right
 id right_icon
