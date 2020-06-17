@@ -56,6 +56,8 @@ android:launchMode="singleTop"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:layout_toEndOf="@+id/replayGesture"
+    android:scaleType="centerCrop"
+    android:padding="0dp"
     android:background="@drawable/hand"
     android:onClick="selectGestureColor" />
 
@@ -65,6 +67,8 @@ android:launchMode="singleTop"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:layout_alignParentStart="true"
+    android:scaleType="centerCrop"
+    android:padding="0dp"
     android:background="@drawable/replay"
     android:onClick="replayGesture" />
 

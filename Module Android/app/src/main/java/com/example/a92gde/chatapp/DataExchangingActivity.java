@@ -1,6 +1,8 @@
 package com.example.a92gde.chatapp;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -28,6 +30,7 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -66,6 +69,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     private ListView chatListView;
     private ChatArrayAdapter arrayAdapter;
     private Gesture latestGesture;
+    private boolean alreadyReplayed = false;
 
     private Gesture g;
     private String color;
@@ -129,11 +133,13 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void replayGesture(View view) {
-        if(latestGesture==null){
-            System.out.println("no gesture");
+        if(latestGesture==null || alreadyReplayed==true){
+            Toast.makeText(DataExchangingActivity.this, "There is no gesture to replay.", Toast.LENGTH_SHORT).show();
         }else{
             showGestureUI(latestGesture);
+            alreadyReplayed = true;
         }
+
     }
 
     /*-------------------------------------TASKS/SERVER-------------------------------------------*/
@@ -212,7 +218,54 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
                                 receivedGest = new Gesture((Gesture)receivedObj); // we have the gesture
                                 latestGesture = receivedGest;
-                                showGestureUI(receivedGest);
+                                alreadyReplayed = false;
+
+
+                                TableLayout layout = (TableLayout) findViewById(R.id.layout);
+                                AlertDialog.Builder builder2 = new AlertDialog.Builder(DataExchangingActivity.this);
+                                builder2.setTitle("You have received a gesture. Do you want to open it now ?");
+                                Gesture finalReceivedGest = receivedGest;
+                                builder2.setPositiveButton("Yes",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Toast.makeText(DataExchangingActivity.this, "Your gesture has been sent.", Toast.LENGTH_SHORT).show();
+                                                showGestureUI(finalReceivedGest);
+                                            }
+                                        });
+                                builder2.setNegativeButton("No",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int id) {
+                                                Toast.makeText(DataExchangingActivity.this, "Your gesture has been sent.", Toast.LENGTH_SHORT).show();
+
+                                                layout.setVisibility(View.INVISIBLE);
+                                                setContentView(R.layout.activity_chat);
+                                                chatListView = (ListView) findViewById(R.id.chatListView);
+                                                arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, new ArrayList<String>());
+                                                for (int i = 0; i < messages.size(); i++) {
+                                                    String m = messages.get(i);
+                                                    int position = m.indexOf("You say");
+                                                    if (position == -1) {
+                                                        arrayAdapter.add(new ChatMessage(true, m));
+                                                    } else {
+                                                        m = m.replace("You say: ", "");
+                                                        arrayAdapter.add(new ChatMessage(false, m));
+                                                    }
+                                                }
+                                                chatListView.setAdapter(arrayAdapter);
+                                                arrayAdapter.notifyDataSetChanged();
+
+                                                if (chatListView == null)
+                                                    Log.i("Info", "Problems with the list view");
+
+                                                if (arrayAdapter == null)
+                                                    Log.i("Info", "Problems with the array adapter ");
+
+                                                if (messages.isEmpty())
+                                                    Log.i("Info", "Problems with the messages ");
+                                            }
+                                        });
+
+                                builder2.show();
 
                                 //Intent intent_test = new Intent(DataExchangingActivity.this,ShowingGestureActivity.class );
                                 //intent_test.putExtra("gesture", receivedGest);
@@ -577,6 +630,42 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         size=new int[2];
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(DataExchangingActivity.this);
+        builder.setTitle("Your gesture has been sent");
+        builder.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(DataExchangingActivity.this, "Your gesture has been sent.", Toast.LENGTH_SHORT).show();
+
+                        layout.setVisibility(View.INVISIBLE);
+                        setContentView(R.layout.activity_chat);
+                        chatListView = (ListView) findViewById(R.id.chatListView);
+                        arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, new ArrayList<String>());
+                        for (int i = 0; i < messages.size(); i++) {
+                            String m = messages.get(i);
+                            int position = m.indexOf("You say");
+                            if (position == -1) {
+                                arrayAdapter.add(new ChatMessage(true, m));
+                            } else {
+                                m = m.replace("You say: ", "");
+                                arrayAdapter.add(new ChatMessage(false, m));
+                            }
+                        }
+                        chatListView.setAdapter(arrayAdapter);
+                        arrayAdapter.notifyDataSetChanged();
+
+                        if (chatListView == null)
+                            Log.i("Info", "Problems with the list view");
+
+                        if (arrayAdapter == null)
+                            Log.i("Info", "Problems with the array adapter ");
+
+                        if (messages.isEmpty())
+                            Log.i("Info", "Problems with the messages ");
+                    }
+                });
+
+
         layout.setOnTouchListener(new View.OnTouchListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -605,31 +694,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                         GestureSendingTask gestureSendingTask = new GestureSendingTask();
                         gestureSendingTask.execute(gesture);
 
-                        layout.setVisibility(View.INVISIBLE);
-                        setContentView(R.layout.activity_chat);
-                        chatListView = (ListView) findViewById(R.id.chatListView);
-                        arrayAdapter = new ChatArrayAdapter(DataExchangingActivity.this, android.R.layout.simple_list_item_1, new ArrayList<String>());
-                        for (int i=0; i<messages.size(); i++){
-                            String m = messages.get(i);
-                            int position = m.indexOf("You say");
-                            if (position ==-1){
-                                arrayAdapter.add(new ChatMessage(true, m));
-                            }else{
-                                m= m.replace("You say: ", "");
-                                arrayAdapter.add(new ChatMessage(false,  m));
-                            }
-                        }
-                        chatListView.setAdapter(arrayAdapter);
-                        arrayAdapter.notifyDataSetChanged();
-
-                        if (chatListView == null)
-                        Log.i("Info", "Problems with the list view");
-
-                        if (arrayAdapter == null)
-                            Log.i("Info", "Problems with the array adapter ");
-
-                        if (messages.isEmpty())
-                            Log.i("Info", "Problems with the messages ");
+                        builder.show();
 
                 }
 
