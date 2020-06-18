@@ -428,6 +428,47 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     public void sendCaress(View view){
 
         // WE HAVE TO DEFINE THE GESTURE
+        Gesture caress  = new Gesture("Blue") ;
+        caress.setOwner_user((username));
+
+        int row = 0;
+        int column = 0 ;
+        int time = 0 ;
+
+        //initalisation
+        Box box1 = new Box(0, 1,0);
+        Box box2 = new Box(0, 4,0);
+        //Finalisation
+        Box box3 = new Box(9, 2,1100);
+        Box box4 = new Box(9, 3,1100);
+
+        //added
+        caress.addBox(box1);
+        caress.addBox(box2);
+        caress.addBox(box3);
+        caress.addBox(box4);
+
+        for(int i = 0; i<9; i++)
+        {
+            for(int j = 1; j<=4 ;j++ )
+            {
+                time = (i +1) * 100 ;
+                column = j ;
+                if (j == 1 || j == 4 )
+                {
+                    row = i + 1 ;
+                    time = time + 100 ;
+                }
+                else
+                {
+                    row = i ;
+                }
+                Box box = new Box(row, column,time);
+                caress.addBox(box);
+            }
+        }
+
+
 
         TableLayout layout = (TableLayout) findViewById(R.id.layout);
         AlertDialog.Builder builder = new AlertDialog.Builder(DataExchangingActivity.this);
@@ -472,6 +513,19 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     public void sendSlap(View view){
 
         // WE HAVE TO DEFINE THE GESTURE
+        Gesture slap  = new Gesture("Red") ;
+        slap.setOwner_user((username));
+
+        int time = 0 ;
+
+        for(int i = 3; i<7; i++)
+        {
+            for(int j = 1; j<=6 ;j++ )
+            {
+                Box box = new Box(i, j,time);
+                slap.addBox(box);
+            }
+        }
 
         TableLayout layout = (TableLayout) findViewById(R.id.layout);
         AlertDialog.Builder builder = new AlertDialog.Builder(DataExchangingActivity.this);
