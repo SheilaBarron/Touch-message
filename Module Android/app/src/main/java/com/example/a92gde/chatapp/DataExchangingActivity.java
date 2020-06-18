@@ -115,11 +115,6 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         ChatTask chatTask = new ChatTask();
         chatTask.delegate = this;
         chatTask.execute();
-
-        //bitmap = screenShot(getWindow().getDecorView().getRootView()) ;
-
-
-
     }
 
     
@@ -415,8 +410,12 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     /*-------------------------------------GESTURE MENU-------------------------------------------*/
 
-    public void selectGesture(View view){
+    public void selectGesture(View view)
+    {
+        bitmap = screenShot(getWindow().getDecorView().getRootView()) ;
         setContentView(R.layout.activity_gesturemenu);
+        ImageView imageViewGestureMenu = (ImageView) findViewById(R.id.imageViewGestureMenu) ;
+        imageViewGestureMenu.setImageBitmap(bitmap);
     }
 
 
@@ -519,7 +518,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     public void selectGestureColor(View view) {
 
 
-        bitmap = screenShot(getWindow().getDecorView().getRootView()) ;
+
 
         setContentView(R.layout.activity_gesture_color);
 
