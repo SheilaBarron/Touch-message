@@ -218,6 +218,11 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                                 alreadyReplayed = false;
 
 
+                                showGestureUI(receivedGest);
+
+
+
+                                /*
                                 TableLayout layout = (TableLayout) findViewById(R.id.layout);
                                 AlertDialog.Builder builder2 = new AlertDialog.Builder(DataExchangingActivity.this);
                                 builder2.setTitle("You have received a gesture. Do you want to open it now ?");
@@ -225,7 +230,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                                 builder2.setPositiveButton("Yes",
                                         new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
-                                                Toast.makeText(DataExchangingActivity.this, "Your gesture has been sent.", Toast.LENGTH_SHORT).show();
+                                                //Toast.makeText(DataExchangingActivity.this, "Your gesture has been sent.", Toast.LENGTH_SHORT).show();
                                                 showGestureUI(finalReceivedGest);
                                             }
                                         });
@@ -263,6 +268,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                                         });
 
                                 builder2.show();
+                                */
+
+
 
                                 //Intent intent_test = new Intent(DataExchangingActivity.this,ShowingGestureActivity.class );
                                 //intent_test.putExtra("gesture", receivedGest);
@@ -791,6 +799,13 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Toast.makeText(DataExchangingActivity.this, "Your gesture has been sent.", Toast.LENGTH_SHORT).show();
+
+                        String traceForMe = "**I just sent you a touch message!**" ;
+                        messages.add("You say: "+traceForMe);
+
+                        String messageToSend = username+separator+"DATA" + " " +traceForMe;
+                        sendMessageToServer(messageToSend);
+
 
                         layout.setVisibility(View.INVISIBLE);
                         setContentView(R.layout.activity_chat);

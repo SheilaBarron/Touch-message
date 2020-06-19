@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: org.joml:joml-android:1.9.3-SNAPSHOT@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/53dbb335dd48bcbd99e95e11f4d81180/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/53dbb335dd48bcbd99e95e11f4d81180/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/a34b8bb6477161ed9b2421b7631b6be2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/joml-android-1.9.3-SNAPSHOT.aar/a34b8bb6477161ed9b2421b7631b6be2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

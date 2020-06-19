@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/dom/Documents/Telecom/2A/IGR/IGR205/Touch-message/Module Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "/Users/Sheila/Desktop/Touch/Module Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "/home/dom/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/221c56fe9745734cbfffe06a69f84e0c/res/values-watch-v21/values-watch-v21.xml",
+                    "source": "/Users/Sheila/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/7096dcef6511522c6cf28994efe3550a/res/values-watch-v21/values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

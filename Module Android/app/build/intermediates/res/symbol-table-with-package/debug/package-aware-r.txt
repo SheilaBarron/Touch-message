@@ -1500,6 +1500,7 @@ id image95
 id image96
 id imageView
 id imageViewGesture
+id imageViewGestureMenu
 id info
 id invisible
 id italic
