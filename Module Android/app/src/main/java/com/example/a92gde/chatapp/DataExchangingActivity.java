@@ -117,7 +117,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         chatTask.execute();
     }
 
-    
+
 
     @Override
     public void onBackPressed() {
@@ -131,8 +131,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void replayGesture(View view) {
         if(latestGesture==null || alreadyReplayed==true){
-            Toast.makeText(DataExchangingActivity.this, "There is no gesture to replay.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DataExchangingActivity.this, "There is no touch-message to replay.", Toast.LENGTH_SHORT).show();
         }else{
+            Toast.makeText(DataExchangingActivity.this, "ONE time replay of last received touch-message.", Toast.LENGTH_SHORT).show();
             showGestureUI(latestGesture);
             alreadyReplayed = true;
         }
@@ -433,6 +434,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         setContentView(R.layout.activity_library);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void sendCaress(View view){
 
         // WE HAVE TO DEFINE THE GESTURE
@@ -456,19 +458,14 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         caress.addBox(box3);
         caress.addBox(box4);
 
-        for(int i = 0; i<9; i++)
-        {
-            for(int j = 1; j<=4 ;j++ )
-            {
+        for(int i = 0; i<9; i++)  {
+            for(int j = 1; j<=4 ;j++ )  {
                 time = (i +1) * 100 ;
                 column = j ;
-                if (j == 1 || j == 4 )
-                {
+                if (j == 1 || j == 4 )  {
                     row = i + 1 ;
                     time = time + 100 ;
-                }
-                else
-                {
+                } else {
                     row = i ;
                 }
                 Box box = new Box(row, column,time);
@@ -480,11 +477,23 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         TableLayout layout = (TableLayout) findViewById(R.id.layout);
         AlertDialog.Builder builder = new AlertDialog.Builder(DataExchangingActivity.this);
-        builder.setTitle("Your caress has been sent");
+        builder.setTitle("The following caress will be sent");
         builder.setPositiveButton("OK",
                 new DialogInterface.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                     public void onClick(DialogInterface dialog, int id) {
                         Toast.makeText(DataExchangingActivity.this, "Your caress has been sent.", Toast.LENGTH_SHORT).show();
+
+                        String traceForMe = "***I just sent you a caress!***" ;
+                        messages.add("You say: "+traceForMe);
+
+                        String messageToSend = username+separator+"DATA" + " " +traceForMe;
+                        sendMessageToServer(messageToSend);
+
+                        GestureSendingTask gestureSendingTask = new GestureSendingTask();
+                        gestureSendingTask.execute(caress);
+
+                        showGestureUI(caress);
 
                         layout.setVisibility(View.INVISIBLE);
                         setContentView(R.layout.activity_chat);
@@ -516,6 +525,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         builder.show();
 
+
     }
 
     public void sendSlap(View view){
@@ -537,11 +547,23 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         TableLayout layout = (TableLayout) findViewById(R.id.layout);
         AlertDialog.Builder builder = new AlertDialog.Builder(DataExchangingActivity.this);
-        builder.setTitle("Your slap has been sent");
+        builder.setTitle("The following slap will be sent");
         builder.setPositiveButton("OK",
                 new DialogInterface.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                     public void onClick(DialogInterface dialog, int id) {
                         Toast.makeText(DataExchangingActivity.this, "Your slap has been sent.", Toast.LENGTH_SHORT).show();
+
+                        String traceForMe = "***I just sent you a slap!***" ;
+                        messages.add("You say: "+traceForMe);
+
+                        String messageToSend = username+separator+"DATA" + " " +traceForMe;
+                        sendMessageToServer(messageToSend);
+
+                        GestureSendingTask gestureSendingTask = new GestureSendingTask();
+                        gestureSendingTask.execute(slap);
+
+                        showGestureUI(slap);
 
                         layout.setVisibility(View.INVISIBLE);
                         setContentView(R.layout.activity_chat);
@@ -798,9 +820,9 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         builder.setPositiveButton("OK",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(DataExchangingActivity.this, "Your gesture has been sent.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DataExchangingActivity.this, "Your touch-message has been sent.", Toast.LENGTH_SHORT).show();
 
-                        String traceForMe = "**I just sent you a touch message!**" ;
+                        String traceForMe = "***I just sent you a touch-message!***" ;
                         messages.add("You say: "+traceForMe);
 
                         String messageToSend = username+separator+"DATA" + " " +traceForMe;

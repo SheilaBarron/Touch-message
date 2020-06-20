@@ -58,6 +58,7 @@ android:launchMode="singleTop"
     android:layout_toEndOf="@+id/replayGesture"
     android:scaleType="centerCrop"
     android:padding="0dp"
+
     android:background="@drawable/hand"
     android:onClick="selectGesture" />
 
@@ -69,6 +70,7 @@ android:launchMode="singleTop"
     android:layout_alignParentStart="true"
     android:scaleType="centerCrop"
     android:padding="0dp"
+
     android:background="@drawable/replay"
     android:onClick="replayGesture" />
 
