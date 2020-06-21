@@ -446,11 +446,11 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         int time = 0 ;
 
         //initalisation
-        Box box1 = new Box(0, 1,0);
-        Box box2 = new Box(0, 4,0);
+        Box box1 = new Box(1, 1,0);
+        Box box2 = new Box(1, 4,0);
         //Finalisation
-        Box box3 = new Box(9, 2,1100);
-        Box box4 = new Box(9, 3,1100);
+        Box box3 = new Box(10, 2,1100);
+        Box box4 = new Box(10, 3,1100);
 
         //added
         caress.addBox(box1);
@@ -458,11 +458,11 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         caress.addBox(box3);
         caress.addBox(box4);
 
-        for(int i = 0; i<9; i++)  {
-            for(int j = 1; j<=4 ;j++ )  {
+        for(int i = 0; i<10; i++)  {
+            for(int j = 2; j<=5 ;j++ )  {
                 time = (i +1) * 100 ;
                 column = j ;
-                if (j == 1 || j == 4 )  {
+                if (j == 2 || j == 5 )  {
                     row = i + 1 ;
                     time = time + 100 ;
                 } else {
