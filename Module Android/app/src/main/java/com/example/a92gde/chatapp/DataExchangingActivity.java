@@ -441,38 +441,72 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
         Gesture caress  = new Gesture("Blue") ;
         caress.setOwner_user((username));
 
-        int row = 0;
-        int column = 0 ;
-        int time = 0 ;
-
         //initalisation
-        Box box1 = new Box(1, 1,0);
-        Box box2 = new Box(1, 4,0);
-        //Finalisation
-        Box box3 = new Box(10, 2,1100);
-        Box box4 = new Box(10, 3,1100);
+        Box box1 = new Box(1, 2,0);
+        Box box2 = new Box(2, 2,200);
+        Box box3 = new Box(3, 2,400);
+        Box box4 = new Box(4, 2,600);
+        Box box5 = new Box(5, 2,800);
+        Box box6 = new Box(6, 2,1000);
+        Box box7 = new Box(7, 2,1200);
+        Box box8 = new Box(8, 2,1400);
+        Box box9 = new Box(9, 2,1600);
+        Box box10 = new Box(10, 2,1800);
+
+        Box box11 = new Box(1, 3,2000);
+        Box box12 = new Box(2, 3,2200);
+        Box box13 = new Box(3, 3,2400);
+        Box box14 = new Box(4, 3,2600);
+        Box box15 = new Box(5, 3,2800);
+        Box box16 = new Box(6, 3,3000);
+        Box box17 = new Box(7, 3,3200);
+        Box box18 = new Box(8, 3,3400);
+        Box box19 = new Box(9, 3,3600);
+        Box box20 = new Box(10, 3,3800);
+
+        Box box21 = new Box(1, 4,4000);
+        Box box22 = new Box(2, 4,4200);
+        Box box23 = new Box(3, 4,4600);
+        Box box24 = new Box(4, 4,4800);
+        Box box25 = new Box(5, 4,5000);
+        Box box26 = new Box(6, 4,5200);
+        Box box27 = new Box(7, 4,5400);
+        Box box28 = new Box(8, 4,5800);
+        Box box29 = new Box(9, 4,6000);
+        Box box30 = new Box(10, 4,6200);
+
 
         //added
         caress.addBox(box1);
         caress.addBox(box2);
         caress.addBox(box3);
         caress.addBox(box4);
-
-        for(int i = 0; i<10; i++)  {
-            for(int j = 2; j<=5 ;j++ )  {
-                time = (i +1) * 100 ;
-                column = j ;
-                if (j == 2 || j == 5 )  {
-                    row = i + 1 ;
-                    time = time + 100 ;
-                } else {
-                    row = i ;
-                }
-                Box box = new Box(row, column,time);
-                caress.addBox(box);
-            }
-        }
-
+        caress.addBox(box5);
+        caress.addBox(box6);
+        caress.addBox(box7);
+        caress.addBox(box8);
+        caress.addBox(box9);
+        caress.addBox(box10);
+        caress.addBox(box11);
+        caress.addBox(box12);
+        caress.addBox(box13);
+        caress.addBox(box14);
+        caress.addBox(box15);
+        caress.addBox(box16);
+        caress.addBox(box17);
+        caress.addBox(box18);
+        caress.addBox(box19);
+        caress.addBox(box20);
+        caress.addBox(box21);
+        caress.addBox(box22);
+        caress.addBox(box23);
+        caress.addBox(box24);
+        caress.addBox(box25);
+        caress.addBox(box26);
+        caress.addBox(box27);
+        caress.addBox(box28);
+        caress.addBox(box29);
+        caress.addBox(box30);
 
 
         TableLayout layout = (TableLayout) findViewById(R.id.layout);
