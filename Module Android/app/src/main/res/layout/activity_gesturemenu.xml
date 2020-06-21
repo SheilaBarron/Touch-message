@@ -20,6 +20,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -29,8 +30,8 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="153dp"
             android:layout_marginLeft="40dp"
+            android:layout_marginTop="153dp"
             android:layout_marginRight="40dp"
             android:text="Do you want to create your own gesture or to use one from the library?"
             android:textColor="@color/black"
@@ -43,9 +44,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button1"
@@ -66,7 +67,19 @@
                 app:layout_constraintLeft_toRightOf="@+id/button1"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
         </LinearLayout>
+
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@android:drawable/ic_dialog_info"
+        android:onClick="seeInformation"/>
 
 
 </android.support.constraint.ConstraintLayout>

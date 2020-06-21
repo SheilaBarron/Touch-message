@@ -597,11 +597,14 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     }
 
+    /*---------------------------------Informations------------------------------------------------*/
+    public void seeInformation (View view)
+    {
+        setContentView(R.layout.activity_information);
+    }
 
     /*---------------------------------SELECT COLOR OF GESTURE------------------------------------*/
     public void selectGestureColor(View view) {
-
-
 
 
         setContentView(R.layout.activity_gesture_color);
