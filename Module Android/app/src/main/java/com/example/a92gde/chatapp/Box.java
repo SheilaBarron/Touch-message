@@ -1,7 +1,9 @@
 package com.example.a92gde.chatapp;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+
+//Class implemented for the gesture creation
+//Each gesture is composed by boxes
 
 public class Box implements Serializable {
 
