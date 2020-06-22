@@ -120,7 +120,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed() { //When one of the users deconnects by clicking on the back button, it is written in the chat
 
         sendMessageToServer(username+separator+"LOGOUT");
         super.onBackPressed();
@@ -129,7 +129,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     /*-------------------------------------REPLAY GESTURE-------------------------------------------*/
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void replayGesture(View view) {
+    public void replayGesture(View view) { //When a user receives a gesture, he/she can replay it but only once, by clicking on the round arrow icon
         if(latestGesture==null || alreadyReplayed==true){
             Toast.makeText(DataExchangingActivity.this, "There is no touch-message to replay.", Toast.LENGTH_SHORT).show();
         }else{
@@ -314,7 +314,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
         chatEditText.setText("");
         messages.add("You say: "+messageContent);
-        arrayAdapter.add(new ChatMessage(side, messageContent));
+        arrayAdapter.add(new ChatMessage(side, messageContent)); //creates a new bubble message when a message is sent
         arrayAdapter.notifyDataSetChanged();
     }
 
@@ -419,7 +419,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     /*-------------------------------------GESTURE MENU-------------------------------------------*/
 
-    public void selectGesture(View view)
+    public void selectGesture(View view) // is called when the user click on the hand icon in order to access the gesture menu
     {
         bitmap = screenShot(getWindow().getDecorView().getRootView()) ;
         setContentView(R.layout.activity_gesturemenu);
@@ -432,12 +432,11 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     public void library(View view){
         setContentView(R.layout.activity_library);
-    }
+    } //is called when the user decides to send a predefined gesture in the gesture menu
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void sendCaress(View view){
+    public void sendCaress(View view){ // creates a caress and sends it to the receiver, then returns to the chat
 
-        // WE HAVE TO DEFINE THE GESTURE
         Gesture caress  = new Gesture("Blue") ;
         caress.setOwner_user((username));
 
@@ -562,9 +561,8 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     }
 
-    public void sendSlap(View view){
+    public void sendSlap(View view){ // creates a slap and sends it to the receiver, then returns to the chat
 
-        // WE HAVE TO DEFINE THE GESTURE
         Gesture slap  = new Gesture("Red") ;
         slap.setOwner_user((username));
 
@@ -636,9 +634,10 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     {
         setContentView(R.layout.activity_information);
     }
+    // called when the user clicks on the information icon in order to have more explanations about the application
 
     /*---------------------------------SELECT COLOR OF GESTURE------------------------------------*/
-    public void selectGestureColor(View view) {
+    public void selectGestureColor(View view) { // allows the user to choose the gesture color, called when the OK button is clicked
 
 
         setContentView(R.layout.activity_gesture_color);
@@ -694,7 +693,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     private Long initial_time;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void startDrawing()
+    public void startDrawing() // called at the beginning of the creation of a custom gesture in order to store it, to show it on the screen and to send it when the user no longer touches the screen
     {
 
         setContentView(R.layout.activity_drawinggesture);
@@ -984,7 +983,7 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
     }
 
-    public int[] coord(ImageView im){
+    public int[] coord(ImageView im){ // gives the coordinates of the finger on the screen when the user touches it
         int[] coordinates = new int[2];
         im.getLocationOnScreen(coordinates);
         return coordinates;
@@ -995,7 +994,8 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
     private Runnable r = null;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void showGestureUI(Gesture receivedGest) {
+    private void showGestureUI(Gesture receivedGest) { //when a user receives a gesture, it will be shown thanks to this function;
+        // This function is also called when the user replays the gesture
 
         handler.post(new Runnable() {
             @Override
@@ -1258,17 +1258,6 @@ public class DataExchangingActivity extends AppCompatActivity implements AsyncRe
 
             }
         });
-
-    }
-
-    /*----------------------------------------DEPRECATED------------------------------------------*/
-
-    // Worked with the showGesture button which is no longer used
-    public void show(View view) {
-
-        Intent intent_test = new Intent(DataExchangingActivity.this,ShowingGestureActivity.class );
-        intent_test.putExtra("gesture", g);
-        startActivity(intent_test);
 
     }
 

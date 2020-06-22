@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatArrayAdapter extends ArrayAdapter {
+public class ChatArrayAdapter extends ArrayAdapter {//This class is a particular array adapter that allows us to have bubble messages
 
     private TextView chatText;
     private List chatMessageList = new ArrayList();
